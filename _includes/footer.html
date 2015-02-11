@@ -1,0 +1,107 @@
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="big-foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 space-bot-md">
+            <img class="footer-logo" src="http://placehold.it/300x200">
+            <br>            
+            <address>
+              Your address
+            </address>    
+          </div>
+          <div class="col-md-6 space-bot-md">
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div>
+
+    <div class="little-foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="little-foot-nav">
+              <li><a href="http://www.asu.edu/copyright/">Copyright &amp; Trademark</a></li>
+              <li><a href="http://www.asu.edu/accessibility/">Accessibility</a></li>
+              <li><a href="http://www.asu.edu/privacy/">Privacy</a></li>
+              <li><a href="http://www.asu.edu/asujobs">Jobs At ASU</a></li>
+              <li><a href="https://cfo.asu.edu/emergency">Emergency</a></li>
+              <li><a href="https://contact.asu.edu/">Contact ASU</a></li>
+            </ul>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.little-foot -->
+
+  </div><!-- /.footer -->
+  <!-- End Footer -->
+
+  <!-- End Footer -->
+  <!-- JS Only -->
+  <script src="./js/jquery-1.11.1.min.js"></script>
+  <script src="./js/toc.js"></script>
+  <script src="./js/smoothscroll.min.js"></script>
+  <!-- Moment -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment-with-locales.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/bootstrap-asu.js"></script>
+  <script src="./js/prettify.js"></script>
+  <script src="./js/run_prettify.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('.sidebar-nav.affix-top').toc();
+
+      $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+      });
+    });
+  </script>
+  <script>
+    // Special version of the affix script since we have a special "related articles" section.  Normally, you can just add `#sidebarNav` to your sidebar.
+    // Sticky sidebar nav
+    var affixed = $('.sidebar-nav.affix-top');
+    affixed.affix({
+      offset: {
+        top: affixed.offset().top,
+        bottom: $('.footer').outerHeight(true) + $('.related-articles').outerHeight(true) + 94
+      }
+    });
+    // Fix the pushed column affix bug in safari, applies to sticky sidebar
+    // https://github.com/twbs/bootstrap/issues/12126
+    // Check if we are in safari
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+      var explicitlySetAffixPosition = function() {
+        if ($(window).innerWidth() >= 992) {
+          affixed.css('left',affixed.offset().left+'px');
+        }
+      };
+      // Before the element becomes affixed, add left CSS that is equal
+      // to the distance of the element from the left of the screen
+      affixed.on('affix.bs.affix',function(){
+        explicitlySetAffixPosition();
+      });
+      // Remove left position when affix-top class is applied
+      affixed.on('affix-top.bs.affix',function(){
+        affixed.css('left','auto');
+      });
+      // On resize of window, un-affix affixed widget to measure where it should be located,
+      // set the left CSS accordingly, re-affix it
+      // Keep all window resize scripts within the throttling function
+      $(window).smartresize(function() {
+        if (affixed.hasClass('affix')) {
+          affixed.removeClass('affix');
+          affixed.css('left','auto');
+          explicitlySetAffixPosition();
+          affixed.addClass('affix');
+        }
+      });
+      // Now we have to remove the left positioning to get affix-bottom to work properly
+      affixed.on('affix-bottom.bs.affix',function(){
+        affixed.css('left','auto');
+      });
+    }
+  </script>
+  </body>
+</html>
