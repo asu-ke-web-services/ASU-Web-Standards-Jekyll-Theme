@@ -1,1 +1,8 @@
 _site
+
+/assets/bootstrap/grunt
+/assets/bootstrap/js
+/assets/bootstrap/less
+/assets/bootstrap/nuget
+
+/assets/jquery/src
