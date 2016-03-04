@@ -78,8 +78,8 @@ module.exports = function (grunt) {
         },
         plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-coverage'],
         files: [
-          { src : ['test/vendor/js/jquery-1.11.2.min.js'], served: true },
-          { src : ['test/vendor/js/bootstrap.min.js'], served: true },
+          { src : ['bower_components/jquery/dist/jquery.min.js'], served: true },
+          { src : ['bower_components/bootstrap/dist/js/bootstrap.min.js'], served: true },
           { src : ['test/qunit/unit/_qunit-fixture.js'], served: true },
           { src : ['<%= concat.bootstrapAsu.src %>'], served: true },
           { src : ['test/qunit/unit/*-test.js'] }
@@ -93,8 +93,8 @@ module.exports = function (grunt) {
         frameworks: ['qunit'],
         plugins: ['karma-qunit', 'karma-phantomjs-launcher'],
         files: [
-          { src : ['test/vendor/js/jquery-1.11.2.min.js'], served: true },
-          { src : ['test/vendor/js/bootstrap.min.js'], served: true },
+          { src : ['bower_components/jquery/dist/jquery.min.js'], served: true },
+          { src : ['bower_components/bootstrap/dist/js/bootstrap.min.js'], served: true },
           { src : ['test/qunit/unit/_qunit-fixture.js'], served: true },
           { src : ['<%= concat.bootstrapAsu.src %>'], served: true },
           { src : ['test/qunit/unit/*-test.js'] }
@@ -224,6 +224,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
     // Watch
     // =====
     watch: {
@@ -263,7 +264,8 @@ module.exports = function (grunt) {
                 'fonts/*'
               ]
             }
-          }
+          },
+          ignorePackages: ['jquery', 'bootstrap']
         }
       }
     }
