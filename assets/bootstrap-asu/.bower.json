@@ -22,14 +22,15 @@
     "tests"
   ],
   "devDependencies": {
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "bootstrap": "^3.3.6"
   },
-  "version": "0.4.0",
-  "_release": "0.4.0",
+  "version": "0.4.4",
+  "_release": "0.4.4",
   "_resolution": {
     "type": "version",
-    "tag": "v0.4.0",
-    "commit": "731ad0ce644d2d831b31f86d23fcd512665b7d34"
+    "tag": "0.4.4",
+    "commit": "7f79e64cbb9266b7b9749f265324477b0adadff7"
   },
   "_source": "git://github.com/gios-asu/ASU-Web-Standards-Bootstrap.git",
   "_target": "^0.4.0",
