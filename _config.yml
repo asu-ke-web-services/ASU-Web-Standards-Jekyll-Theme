@@ -4,6 +4,11 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"      
 
 base_path: ""
 
