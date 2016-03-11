@@ -1,4 +1,6 @@
-{% include header.html %}
+---
+layout: default
+---
 {% assign contents = content | split: '<!--break-->' %}
 <div class="container space-top-lg">
   <div class="row">
@@ -60,5 +62,3 @@
   </div>
 </div>
 {% endif %}
-
-{% include footer.html %}
