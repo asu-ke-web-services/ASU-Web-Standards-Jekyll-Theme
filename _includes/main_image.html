@@ -1,0 +1,19 @@
+{% if page.image.feature %}
+<div class="hero hero-bg-img hero-action-call" style="background-image: url({{ site.url }}/assets/images/{{ page.image.feature }});">
+  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>
+          {% if page.tags.size > 0 %}
+            {{ page.tags[0] }}:
+          {% endif %}
+          {{ page.title }}
+          
+        </h2>
+        <p>{{ page.description }}</p>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div>
+{% endif %}

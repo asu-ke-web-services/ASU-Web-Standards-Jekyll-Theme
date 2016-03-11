@@ -2,11 +2,24 @@
 <head>
 {% include head.html%}
 </head>
-
 <body data-spy="scroll" data-target=".sidebar-nav">
-{% include header.html %}
-{{ content }}
+<div id="page">
+  {% include asu_header.html %}
+  {% include navigation_outer.html %}
+  <span id="skippy" class="sr-only"></span>
+  <div id="ws-navbar-collapse-1" class="collapse navbar-collapse"></div>
+</div>
+
+<div id="main-wrapper" class="clearfix">
+  <div id="main" class="clearfix">
+    <div id="content" class="site-content">
+      {% include main_image.html%}
+      {{ content }}
+    </div>
+  </div>
+</div>
 {% include footer.html %}
+{% include foot.html %}
 
 </body>
 </html>

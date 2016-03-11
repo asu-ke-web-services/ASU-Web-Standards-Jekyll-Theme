@@ -1,4 +1,3 @@
-  <div id="page">
       <div id="asu_header">
         <header class="" id="masthead">
   <div class="container">
@@ -110,56 +109,3 @@
           </div>
         </div>
       </div>
-      <!-- Global Navigation -->
-      <nav class="navbar navbar-ws">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ws-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://asu.edu">{{ site.organization_name}}</a>
-          </div>
-          <div id="ws-navbar-collapse-1" class="collapse navbar-collapse">
-            {% include navigation.html %}
-          </div>
-          </div><!-- /.navbar-collapse -->
-        </nav>
-        <!-- End Navigation -->
-        <span id="skippy" class="sr-only"></span>
-
-
-
-
-        <div id="ws-navbar-collapse-1" class="collapse navbar-collapse">
-          
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-  </div>
-  <!-- End Navigation -->
-
-  <div id="main-wrapper" class="clearfix">
-    <div id="main" class="clearfix">
-      <div id="content" class="site-content">
-        {% if page.image.feature %}
-        <div class="hero hero-bg-img hero-action-call" style="background-image: url({{ site.url }}/assets/images/{{ page.image.feature }});">
-          {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>
-                  {% if page.tags.size > 0 %}
-                    {{ page.tags[0] }}:
-                  {% endif %}
-                  {{ page.title }}
-                  
-                </h2>
-                <p>{{ page.description }}</p>
-              </div>
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div>
-        {% endif %}
