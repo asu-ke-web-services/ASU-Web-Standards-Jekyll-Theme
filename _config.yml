@@ -11,3 +11,13 @@ kramdown:
   input: GFM
   auto_ids: true
 highlighter: pygments
+
+organization_name: IDEAlab
+
+menu:
+  - name: Test1
+    link: test1
+  - name: Test2
+    link: test2
+    
+tags: a,b,c,d
