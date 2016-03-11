@@ -13,6 +13,7 @@ kramdown:
 highlighter: pygments
 
 organization_name: IDEAlab
+title: IDEAlab -- Integrating Design, Engineering, and Analysis
 
 menu:
   - name: Test1

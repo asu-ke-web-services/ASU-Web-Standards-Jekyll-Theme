@@ -105,7 +105,7 @@
 </header>        <div id="site-name-desktop" class="section site-name-desktop">
           <div class="container">
             <h1 class="site-title" id="asu_school_name" style="">
-                            <a href="https://asu.edu" id="blog-name-site-title">Your Organization Name</a>
+                            <a href="https://asu.edu" id="blog-name-site-title">{{ site.organization_name}}</a>
             </h1>
           </div>
         </div>
@@ -120,7 +120,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://asu.edu">Your Organization Name</a>
+            <a class="navbar-brand" href="https://asu.edu">{{ site.organization_name}}</a>
           </div>
           <div id="ws-navbar-collapse-1" class="collapse navbar-collapse">
             {% include navigation.html %}
