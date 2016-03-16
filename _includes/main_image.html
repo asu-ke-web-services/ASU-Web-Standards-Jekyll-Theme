@@ -1,5 +1,5 @@
 {% if page.image.feature %}
-<div class="hero hero-bg-img hero-action-call" style="background-image: url({{ site.url }}/assets/images/{{ page.image.feature }});">
+<div class="hero hero-bg-img hero-action-call" style="background-image: url({{ site.url }}{{site.base_path}}/assets/images/{{ page.image.feature }});">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   <div class="container">
     <div class="row">
