@@ -1,0 +1,13 @@
+<div class="col-md-4 col-sm-12 space-bot-md">
+  <h2>{{site.organization_name}}</h2>
+  <address>
+    {%for item in site.address%}
+      {{item}}<br>
+    {%endfor%}
+    Phone: <a class="phone-link" href="tel:{{site.phone}}" id="phone-link-in-footer">{{site.phone}}</a>
+  </address>
+  <p>
+    <a class="contact-link" href="mailto:{{site.email}}" id="contact-us-link-in-footer">Contact Us</a>
+  </p>  
+  <a class="btn btn-primary" href="https://giving.asu.edu/" id="contribute-button-in-footer">Contribute</a>            
+</div>

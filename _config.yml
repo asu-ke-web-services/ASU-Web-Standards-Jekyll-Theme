@@ -1,9 +1,23 @@
+address: 
+  - Address Line 1
+  - Address Line 2
+  - City, State, AZ 12345
+
+phone: 480-727-1234  
+
+email: email@asu.edu
+
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"      
 
 base_path: ""
 
@@ -11,3 +25,14 @@ kramdown:
   input: GFM
   auto_ids: true
 highlighter: pygments
+
+organization_name: Your Organization Name
+title: Your Site Title
+
+menu:
+  - name: Test1
+    link: test1
+  - name: Test2
+    link: test2
+    
+tags: a,b,c,d

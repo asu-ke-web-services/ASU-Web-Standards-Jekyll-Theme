@@ -1,14 +1,8 @@
-      </div>
-    </div>
-  </div>
   <div class="footer">
     <div class="big-foot">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-12 space-bot-md">
-            
-            <a class="btn btn-primary" href="https://www.asufoundation.org/" id="contribute-button-in-footer">Contribute</a>            
-          </div>
+          {%include footer_custom.html%}
         </div><!-- /.row -->
       </div><!-- /.container -->
     </div><!-- /.big-foot -->
@@ -20,7 +14,7 @@
           </div>
           <div class="hidden-sm hidden-xs col-md-2 innovation-footer-image-wrapper">
              <a href="http://yourfuture.asu.edu/rankings" target="_blank" id="best-colleges-us-news-bage-icon">
-              <img src="https://sustainability.asu.edu/wp-content/themes/ASU-Web-Standards-Wordpress-Theme/assets/asu-web-standards/img/footer/best-colleges-us-news-badge.png" alt="Best Colleges U.S. News Most Innovative 2016">
+              <img src="{{site.base_path}}/assets/bootstrap-asu/build/img/footer/best-colleges-us-news-badge.png" alt="Best Colleges U.S. News Most Innovative 2016">
             </a>
           </div>
         </div>
@@ -46,55 +40,3 @@
     </div>
 
   </div><!-- /.footer -->
-  <!-- End Footer -->
-
-  <!-- End Footer -->
-  <!-- JS Only -->
-  <script src="./assets/jquery/dist/jquery.min.js"></script>
-  <script src="./js/toc.js"></script>
-  <script src="./js/smoothscroll.min.js"></script>
-  <!-- Moment -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment-with-locales.min.js"></script>
-  <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="./assets/bootstrap-asu/build/js/bootstrap-asu.min.js"></script>
-  <script src="./js/prettify.js"></script>
-  <script src="./js/run_prettify.js"></script>
-  <script type="text/javascript">
-    /**
- * navigation.js
- *
- * Handles toggling the navigation menu for small screens.
- */
-( function() {
-  var container, button, menu;
-
-  container = document.getElementById( 'site-navigation' );
-  if ( ! container )
-    return;
-
-  button = container.getElementsByTagName( 'button' )[0];
-  if ( 'undefined' === typeof button )
-    return;
-
-  menu = container.getElementsByTagName( 'ul' )[0];
-
-  // Hide menu toggle button if menu is empty and return early.
-  if ( 'undefined' === typeof menu ) {
-    button.style.display = 'none';
-    return;
-  }
-
-  if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-    menu.className += ' nav-menu';
-
-  button.onclick = function() {
-    if ( -1 !== container.className.indexOf( 'toggled' ) )
-      container.className = container.className.replace( ' toggled', '' );
-    else
-      container.className += ' toggled';
-  };
-} )();
-
-  </script>
-  </body>
-</html>
