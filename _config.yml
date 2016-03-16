@@ -19,7 +19,7 @@ defaults:
     values:
       layout: "post"      
 
-base_path: "/test"
+base_path: ""
 
 kramdown:
   input: GFM
