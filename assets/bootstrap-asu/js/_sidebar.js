@@ -6,18 +6,23 @@
 
     var affixed = $('#sidebarNav').each(function () {
       var $this = $(this);
+      var sidebarHeight = $this.outerHeight();
+      var windowHeight = $(window).height();
 
-      $this.affix( {
-        offset: {
-          top : $this.offset().top - navbarHeight,
-          bottom : function () {
-            var fix = parseInt($this.css('margin-bottom'), 10)
-            fix += parseInt($this.css('padding-top'), 10)
-            fix += parseInt($this.css('padding-bottom'), 10)
-            return $('.footer').outerHeight(true) + fix
+      // only if the sidebarNav is taller than the page content then affix
+      if ( sidebarHeight < (windowHeight - navbarHeight)) {
+        $this.affix( {
+          offset: {
+            top : $this.offset().top - navbarHeight,
+            bottom : function () {
+              var fix = parseInt($this.css('margin-bottom'), 10)
+              fix += parseInt($this.css('padding-top'), 10)
+              fix += parseInt($this.css('padding-bottom'), 10)
+              return $('.footer').outerHeight(true) + fix
+            }
           }
-        }
-      } )
+        } )
+      }
 
       // Hacky fix for responsive width
       // Set the sidebar's width to be the width of the

@@ -1,7 +1,10 @@
 {
   "name": "bootstrap-asu",
   "description": "A base implementation of the ASU Web Standards",
-  "main": "build/css/bootstrap-asu.min.css",
+  "main": [
+    "build/css/bootstrap-asu.min.css",
+    "build/js/bootstrap-asu.min.js"
+  ],
   "authors": [
     "The Julie Ann Wrigley Global Institute of Sustainability <giosweb@asu.edu>"
   ],
@@ -25,14 +28,14 @@
     "font-awesome": "^4.5.0",
     "bootstrap": "^3.3.6"
   },
-  "version": "0.4.4",
-  "_release": "0.4.4",
+  "version": "0.4.7",
+  "_release": "0.4.7",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.4",
-    "commit": "7f79e64cbb9266b7b9749f265324477b0adadff7"
+    "tag": "v0.4.7",
+    "commit": "5f7eda964fbbc86d36c64408c2e306925aaf725d"
   },
   "_source": "git://github.com/gios-asu/ASU-Web-Standards-Bootstrap.git",
-  "_target": "^0.4.0",
+  "_target": "^0.4.7",
   "_originalSource": "bootstrap-asu"
 }
