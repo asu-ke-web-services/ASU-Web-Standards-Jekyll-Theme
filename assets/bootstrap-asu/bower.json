@@ -1,7 +1,10 @@
 {
   "name": "bootstrap-asu",
   "description": "A base implementation of the ASU Web Standards",
-  "main": "build/css/bootstrap-asu.min.css",
+  "main": [
+    "build/css/bootstrap-asu.min.css",
+    "build/js/bootstrap-asu.min.js"
+  ],
   "authors": [
     "The Julie Ann Wrigley Global Institute of Sustainability <giosweb@asu.edu>"
   ],

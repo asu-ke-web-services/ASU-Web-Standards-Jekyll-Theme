@@ -1,5 +1,5 @@
 /**========================================================================
- * Web Standards: bootstrap-asu.js v0.4.4
+ * Web Standards: bootstrap-asu.js v0.4.7
  * ========================================================================
  * Copyright 2014-2016 ASU
  * Licensed under MIT (https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/blob/master/LICENSE)
@@ -396,18 +396,23 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
 
     var affixed = $('#sidebarNav').each(function () {
       var $this = $(this);
+      var sidebarHeight = $this.outerHeight();
+      var windowHeight = $(window).height();
 
-      $this.affix( {
-        offset: {
-          top : $this.offset().top - navbarHeight,
-          bottom : function () {
-            var fix = parseInt($this.css('margin-bottom'), 10)
-            fix += parseInt($this.css('padding-top'), 10)
-            fix += parseInt($this.css('padding-bottom'), 10)
-            return $('.footer').outerHeight(true) + fix
+      // only if the sidebarNav is taller than the page content then affix
+      if ( sidebarHeight < (windowHeight - navbarHeight)) {
+        $this.affix( {
+          offset: {
+            top : $this.offset().top - navbarHeight,
+            bottom : function () {
+              var fix = parseInt($this.css('margin-bottom'), 10)
+              fix += parseInt($this.css('padding-top'), 10)
+              fix += parseInt($this.css('padding-bottom'), 10)
+              return $('.footer').outerHeight(true) + fix
+            }
           }
-        }
-      } )
+        } )
+      }
 
       // Hacky fix for responsive width
       // Set the sidebar's width to be the width of the
@@ -685,11 +690,11 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
     } )
 
     var mainSearch = document.getElementById( 'main-search' )
+    var $menuHiddenButton = $( '.navbar-ws .navbar-toggle' )
     if ( mainSearch === null ) {
       // ==========
       // Navigation
       // ==========
-      var $menuHiddenButton = $( '.navbar-ws .navbar-toggle' )
       $menuHiddenButton.hide()
 
       // add asu menu items
@@ -739,7 +744,7 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
       searchMarkUp += '  </form>'
       searchMarkUp += '</div>'
 
-      var $search = $( searchMarkUp ).prependTo( '#block-asu-brand-asu-brand-header .content' )
+      $( searchMarkUp ).prependTo( '#block-asu-brand-asu-brand-header .content' )
 
       // =====
       // Icons
@@ -759,9 +764,13 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
       // the #asu_mobile_hdr like webspark does.
       // For now, we will append to #asu_mobile_hdr, but we should look into
       // this again in the future.
-      var $mobileMenuButton = $( mobileMenuMarkup ).appendTo( '#asu_mobile_hdr' )
-      var $searchButton = $( searchMenuMarkup ).appendTo( '#asu_mobile_hdr' )
-
+      $( mobileMenuMarkup ).appendTo( '#asu_mobile_hdr' )
+      $( searchMenuMarkup ).appendTo( '#asu_mobile_hdr' )
+    }
+    var $mobileMenuButton = $( '#asu_mobile_menu_button' );
+    var $searchButton = $( '#asu_mobile_search_button' );
+    var $search = $( '#main-search' );
+    if ( $searchButton && $search ) {
       // ===========
       // Icon Events
       // ===========
@@ -781,7 +790,9 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
           $search.find('input[type=text]').focus()
         }
       } )
+    }
 
+    if ( $blackout ) {
       $blackout.click(function () {
         // Close the menu
         $( '.navbar-ws .navbar-collapse' ).waitFor( ':not(.in)', function () {
@@ -792,7 +803,9 @@ case"millisecond":return Math.floor(24*b*60*60*1e3)+this._milliseconds;default:t
         $menuHiddenButton.click()
         hideBlackout();
       } );
+    }
 
+    if ( $mobileMenuButton ) {
       $mobileMenuButton.click( function ( e ) {
         e.preventDefault();
         var $self = $( this )

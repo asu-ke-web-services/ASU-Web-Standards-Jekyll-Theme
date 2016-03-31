@@ -7,7 +7,7 @@ ASU Web Standards Bootstrap
 
 [![Github release](https://img.shields.io/github/release/gios-asu/ASU-Web-Standards-Bootstrap.svg?style=flat)](https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/releases)
 [![Github issues](https://img.shields.io/github/issues/gios-asu/ASU-Web-Standards-Bootstrap.svg?style=flat)](https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/issues)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat)](https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/blob/master/LICENSE.md) [![Analytics](https://ga-beacon.appspot.com/UA-561868-49/gios-asu/ASU-Web-Standards-Bootsrap?flat)](https://github.com/igrigorik/ga-beacon)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat)](https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/blob/master/LICENSE.md)
 
 [View the Visual Documentation](http://gios-asu.github.io/ASU-Web-Standards-Bootstrap)
 
@@ -202,8 +202,9 @@ If you are releasing a new version, make sure to:
 
 This project is being heavily used by:
 
-- [ASU-Wordpress-Web-Standards-Theme](https://github.com/gios-asu/ASU-Wordpress-Web-Standards-Theme)
-- [gios-asu.github.io](https://github.com/gios-asu/gios-asu.github.io)
+- [Wordpress ASU Web Standards Theme](https://github.com/gios-asu/ASU-Wordpress-Web-Standards-Theme)
+- [Jekyll ASU Web Standards Theme](https://github.com/gios-asu/ASU-Web-Standards-Jekyll-Theme)
+- [Django ASU Web Standards Theme](https://github.com/asulibraries/django-asutheme)
 
 
 # Other Implementations of the ASU Web Standards

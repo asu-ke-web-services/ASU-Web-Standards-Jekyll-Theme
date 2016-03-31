@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ========================================================================
- * Web Standards: bootstrap-asu.css v0.4.4
+ * Web Standards: bootstrap-asu.css v0.4.5
  * ========================================================================
  * Copyright 2014-2016 ASU
  * Licensed under MIT (https://github.com/gios-asu/ASU-Bootstrap-Addon/blob/master/LICENSE)
@@ -825,25 +825,35 @@ code {
   display: none;
 }
 
-#site-name-desktop h1 {
+#site-name-desktop h1,
+#site-name-desktop div {
   line-height: 1.75rem;
   padding: 4px 6px 8px;
 }
-#site-name-desktop h1.site-title {
+#site-name-desktop h1.container,
+#site-name-desktop div.container {
+  padding: 0 15px;
+}
+#site-name-desktop h1.site-title,
+#site-name-desktop div.site-title {
   font-size: 1.5rem;
   margin: 0;
   padding: 0 13px 13px 0;
 }
-#site-name-desktop h1.site-title a {
+#site-name-desktop h1.site-title a,
+#site-name-desktop div.site-title a {
   border-bottom-color: transparent;
   color: #4f5557;
   font-weight: normal;
   text-decoration: none;
 }
-#site-name-desktop h1.site-title a:first-child {
+#site-name-desktop h1.site-title a:first-child,
+#site-name-desktop div.site-title a:first-child {
   color: #000;
 }
-#site-name-desktop h1.site-title a:hover, #site-name-desktop h1.site-title a:focus {
+#site-name-desktop h1.site-title a:hover, #site-name-desktop h1.site-title a:focus,
+#site-name-desktop div.site-title a:hover,
+#site-name-desktop div.site-title a:focus {
   text-decoration: underline;
 }
 
@@ -3155,7 +3165,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .hero h2.pop,
 .hero p.pop {
   background-color: rgba(0, 0, 0, 0.8);
-  /* 
+  /*
    * table is a little trick to have an inline-block look, but
    * still break after each block
    */
@@ -3349,7 +3359,6 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 @media (max-width: 1199px) {
   .hero-slim .panel-pane {
     margin-bottom: 8px;
-    margin-top: 8px;
   }
 }
 @media (max-width: 1091px) {
