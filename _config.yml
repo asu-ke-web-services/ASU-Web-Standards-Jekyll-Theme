@@ -1,9 +1,9 @@
-address: 
+address:
   - Address Line 1
   - Address Line 2
   - City, State, AZ 12345
 
-phone: 480-727-1234  
+phone: 480-727-1234
 
 email: email@asu.edu
 
@@ -17,7 +17,7 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
-      layout: "post"      
+      layout: "post"
 
 base_path: ""
 
@@ -29,10 +29,12 @@ highlighter: pygments
 organization_name: Your Organization Name
 title: Your Site Title
 
+exclude: [vendor]
+
 menu:
   - name: Test1
     link: test1
   - name: Test2
     link: test2
-    
+
 tags: a,b,c,d
