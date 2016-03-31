@@ -33,7 +33,7 @@
   </li>
   {% for item in site.menu %}
     <li class="menu-item">
-      <a href="{{site.base_path}}/{{item.link}}" title="{{item.name}}">{{item.name}}</a>
+      <a href="{{ site.url }}/{{site.base_path}}/{{item.link}}" title="{{item.name}}">{{item.name}}</a>
     </li>
   {% endfor %}
 </ul>

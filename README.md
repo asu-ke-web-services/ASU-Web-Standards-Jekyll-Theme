@@ -16,7 +16,7 @@ For more about Jekyll with Pages, checkout https://help.github.com/articles/usin
 
 ## Getting started developing these pages locally:
 ````
- gem install jekyll
- jekyll build --watch
+ bundle install
+ bundel exec jekyll build --watch
 ````
 it will compile the site into the _site directory for your preview, this direction
