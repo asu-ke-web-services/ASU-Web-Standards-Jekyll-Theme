@@ -1,6 +1,8 @@
 language: ruby
 rvm:
-  - 2.1
+  - 2.3
+sudo: false
+cache: bundler
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --allow-hash-href --file-ignore "/.*/_site/assets/.*/"
