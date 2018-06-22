@@ -1,0 +1,119 @@
+// Calendars
+//
+// A special web standards widget. Use the `.calendarPopover` class
+// to make calendars have a popover with a download widget.
+//
+// Markup:
+// <div class="calendar-group">
+//   <div class="calendar-date calendarPopover" data-original-title="" title="">
+//     <time datetime="2014-01-01">
+//       <span class="weekday">Sun</span>
+//       <span class="date">1</span>
+//       <span class="month">Jan</span>
+//     </time>
+//   </div>
+//   <div class="calendar-date calendarPopover" data-original-title="" title="">
+//     <time datetime="2014-03-08">
+//       <span class="weekday">Tue</span>
+//       <span class="date">8</span>
+//       <span class="month">Mar</span>
+//     </time>
+//   </div>
+//   <div class="calendar-date calendarPopover" data-original-title="" title="">
+//     <time datetime="2014-06-27">
+//       <span class="weekday">Wed</span>
+//       <span class="date">27</span>
+//       <span class="month">Jun</span>
+//     </time>
+//   </div>
+//   <div class="calendar-date calendarPopover last" data-original-title="" title="">
+//     <time datetime="2014-10-30">
+//       <span class="weekday">Fri</span>
+//       <span class="date">30</span>
+//       <span class="month">Oct</span>
+//     </time>
+//   </div>
+// </div>
+//
+// Styleguide calendars
+.calendar-group {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.calendar-date {
+  background-color: $color-alabaster;
+  border: $space-xsmall solid $color-emperor;
+  border-radius: $border-radius;
+  color: $color-emperor;
+  cursor: default;
+  display: block;
+  float: left;
+  margin: 0 $space-xxlarge $space-xxlarge 0;
+  padding: $space-large;
+  text-align: center;
+  text-transform: uppercase;
+  width: 125px;
+
+  &:hover {
+    @include box-shadow(0 0 10px rgba(0, 0, 0, .2));
+    border: $space-xsmall solid $color-maroon;
+  }
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  &.last {
+    margin-right: 0;
+  }
+
+  + .popover {
+    white-space: nowrap;
+  }
+
+  .weekday,
+  .month {
+    padding: 3px 7px;
+    text-align: center;
+    width: (2 * $space-xlarge);
+  }
+
+  .weekday {
+    background-color: $color-white;
+    border: $space-xsmall solid $color-silver;
+    border-radius: $border-radius;
+    float: left;
+    font-size: $font-size-calendar;
+    line-height: $line-height-calendar;
+    margin-bottom: $space-base;
+
+  }
+
+  .month {
+    float: left;
+    font-size: $calendar-month__font-size;
+    line-height: $line-height-calendar;
+  }
+
+  .date {
+    float: right;
+    font-size: $calendar-date__font-size;
+    font-weight: $font-weight-light;
+    line-height: .9;
+    width: 60px;
+  }
+}

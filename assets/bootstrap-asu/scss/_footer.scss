@@ -1,0 +1,347 @@
+// Footer
+//
+// The footer is made up of three pars, `big-foot`, `little-foot`, and the `innovation-bar`
+//
+// Styleguide footer
+
+// TODO verify these paddings and margins when the HUB finalizing the
+// details
+.footer {
+  p,
+  div,
+  span {
+    color: $color-white;
+  }
+
+  h1 {
+    color: $color-white;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: $footer-h2__font-size;
+    font-weight: $font-weight-normal;
+    margin-bottom: 16px;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-white;
+  }
+
+  a:not(.btn),
+  address,
+  .phone-link {
+    border-bottom-color: $color-silver;
+    color: $color-silver;
+    margin-bottom: 0;
+  }
+
+  .contact-link {
+    border-bottom-color: $color-dull-chalice;
+    border-bottom-style: dotted;
+    border-bottom-width: $space-xsmall;
+    color: $color-dull-chalice;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+      content: ' ';
+      display: table;
+    }
+
+    &::after {
+      clear: both;
+    }
+
+    > li {
+      display: block;
+      position: relative;
+
+      > a {
+        position: relative;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // ====================
+  // Social Media Section
+  // ====================
+  .social-media {
+    margin-bottom: 30px;
+
+    > li {
+      float: left;
+
+      > a {
+        border-bottom: 0;
+        color:         $color-dull-chalice;
+        font-size:     $footer-social__font-size;
+        margin-right:  10px;
+
+        &:hover,
+        &:focus {
+          color: $color-white;
+        }
+      }
+    }
+
+    > li:last-child > a {
+      margin-right: 0;
+    }
+  }
+
+  // ==========
+  // Big Footer
+  // ==========
+  .big-foot {
+    background-color: $color-cod-gray;
+    color: $color-white;
+    padding-bottom: 14px;
+    padding-top: 40px;
+
+    img {
+      max-width: 300px;
+    }
+
+    a {
+      border-bottom: 1px dotted;
+      border-bottom-color: $color-dull-chalice;
+      color: $color-dull-chalice;
+      text-decoration: none;
+
+      &.no-border {
+        border-bottom: 0;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+      }
+    }
+    // Dont over-ride buttons in the footer
+    a.btn,
+    button {
+      border: inherit;
+      color: inherit;
+    }
+  }
+
+  .big-foot-nav {
+    li {
+      margin-bottom: 12px;
+    }
+  }
+
+// little foot
+//
+// Markup:
+// <div class="little-foot">
+//   <div class="container">
+//     <div class="row">
+//       <div class="col-md-12">
+//         <div class="little-foot__right">
+//           <ul class="little-foot-nav">
+//             <li><a href="http://www.asu.edu/copyright/" id="copyright-trademark-legal-footer">Copyright &amp; Trademark</a></li>
+//             <li><a href="http://www.asu.edu/accessibility/" id="accessibility-legal-footer">Accessibility</a></li>
+//             <li><a href="http://www.asu.edu/privacy/" id="privacy-legal-footer">Privacy</a></li>
+//             <li><a href="http://www.asu.edu/asujobs" id="jobs-legal-footer">Jobs</a></li>
+//             <li><a href="https://cfo.asu.edu/emergency" id="emergency-legal-footer">Emergency</a></li>
+//             <li><a href="https://contact.asu.edu/" id="contact-asu-legal-footer">Contact ASU</a></li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div><!-- /.row -->
+//   </div><!-- /.container -->
+// </div><!-- /.little-foot -->
+//
+// Styleguide footer.little-foot
+
+  .little-foot {
+    background-color: $color-mercury;
+    height: 59px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .little-foot-nav {
+    > li {
+      float: left;
+      padding-bottom: 12px;
+
+      > a {
+        border-bottom: 0;
+        color: #333;
+        font-size: $footer-little-link__font-size;
+        font-weight: $font-weight-normal;
+        margin-right: 30px;
+        text-decoration: none;
+      }
+    }
+
+    > li:last-child > a {
+      margin-right: 0;
+    }
+  }
+}
+
+.little-foot__right {
+  padding: 20px 10px;
+}
+
+@media (max-width: 991px) {
+  .footer h2 {
+    cursor: pointer;
+  }
+}
+
+/*
+ *
+ * Caret Changes for footer dropdown
+ *
+ */
+@media (max-width: 768px) {
+  .foot-menu-border {
+    border-top: 1px solid #383d3e;
+    margin-bottom: 0;
+  }
+
+  .footer .menu h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 16px;
+    padding-top: 24px;
+  }
+
+  div.footer {
+    h2.collapsed {
+      > span.caret {
+        /* Caret Left */
+        border-bottom: 6px solid transparent;
+        border-left: 0 dotted;
+        border-right: 6px solid;
+        border-top: 6px solid transparent;
+        display: inline-block;
+        left: 94%;
+        margin-top: 10px;
+        position: absolute;
+        vertical-align: left;
+      }
+    }
+  }
+
+  div.footer {
+    h2 {
+      > span.caret {
+        /* Caret Down */
+        border-bottom: 0 dotted;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid;
+        display: inline-block;
+        left: 94%;
+        margin-top: 10px;
+        position: absolute;
+        vertical-align: left;
+      }
+    }
+  }
+}
+
+// Innovation bar
+//
+// Markup:
+// <div id="innovation-bar">
+//   <div class="container">
+//     <div class="row">
+//       <div class="col-md-10 space-top-sm space-bot-sm">
+//         <a href="http://yourfuture.asu.edu/rankings" target="_blank" id="asu-is-number-1-for-innovation">ASU is #1 in the U.S. for Innovation</a>
+//       </div>
+//       <div class="hidden-sm hidden-xs col-md-2 innovation-footer-image-wrapper">
+//          <a href="http://yourfuture.asu.edu/rankings" target="_blank" id="best-colleges-us-news-bage-icon">
+//           <img src="../img/footer/best-colleges-us-news-badge.png" alt="Best Colleges U.S. News Most Innovative 2016">
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide footer.innovation-bar
+
+#innovation-bar {
+  background-color: $color-gold;
+  height: 56px;
+  text-align: right;
+
+  a {
+    border-bottom: 0;
+    color: black;
+    font-size: x-large;
+    font-weight: $font-weight-bold;
+  }
+
+  .innovation-footer-image-wrapper {
+    height: 0;
+
+    a {
+      border: 0;
+      display: inline-block;
+      height: 150px;
+      margin-top: -20px;
+      text-decoration: none;
+
+      img {
+        max-width: 87%;
+        padding-top: 6px;
+
+        @media (max-width: $asu-screen-sm-max) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .innovation-footer-text-wrapper {
+    font-size: $innovation-footer__text-wrapper__font-size;
+    font-weight: $font-weight-bold;
+
+    @media(max-width: $asu-screen-xs-max) {
+      font-size: $innovation-footer__text-wrapper__font-size--small;
+    }
+
+    a {
+      border-bottom: 0;
+      color: black;
+      font-size: $innovation-footer__text-wrapper__font-size !important;
+      font-weight: $font-weight-bold !important;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

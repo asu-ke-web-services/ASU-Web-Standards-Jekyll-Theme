@@ -1,0 +1,116 @@
+// Panels
+//
+// By default, all the `.panel` does is apply some basic border and padding to
+// contain some content.
+//
+// Markup:
+// <div class="panel panel-default">
+//   <div class="panel-body">
+//     Basic panel example
+//   </div>
+// </div>
+//
+// Styleguide panels
+
+// Panel Modifiers
+//
+// Markup:
+// <div class="panel {{modifier_class}}">
+//   <div class="panel-heading"><h3 class="panel-title">Panel title</h3></div>
+//   <div class="panel-body">Panel content</div>
+// </div>
+//
+// .panel-primary - Primary panel
+// .panel-success - Successful panel
+// .panel-info    - Informational panel
+// .panel-warning - Warning panel
+// .panel-danger  - Danger panel
+//
+// Styleguide panels.modifiers
+.panel {
+  background-color: $color-alabaster;
+  border: $space-xsmall solid $color-alto;
+  margin-bottom: $space-xxlarge;
+
+  h3 {
+    font-size: $pane-h3__font-size;
+
+    @media(max-width: $asu-screen-xs-max) {
+      font-size: $pane-h3__font-size--small;
+    }
+  }
+
+  p {
+    font-size: $pane-p__font-size;
+    line-height: $pane-p__line-height;
+  }
+
+  > .panel-body + {
+    .table,
+    .table-responsive {
+      border-top: 1px solid $color-nobel;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.panel-body {
+  padding: 30px 20px;
+}
+
+.panel-title {
+  font-size:     $panel-title__font-size;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+.panel-group {
+  margin-bottom: $space-xxlarge;
+}
+
+// Contextual variations
+.panel-primary {
+  @include panel-variant(
+    $color-maroon,
+    $color-white,
+    $color-maroon,
+    $color-maroon);
+}
+
+.panel-success {
+  @include panel-variant(
+    $color-green-darkened,
+    $color-white,
+    $color-green,
+    $color-green-darkened);
+}
+
+.panel-info {
+  @include panel-variant(
+    $color-blue-darkened,
+    $color-white,
+    $color-blue,
+    $color-blue-darkened);
+}
+
+.panel-warning {
+  @include panel-variant(
+    $color-yellow-darkened,
+    $color-white,
+    $color-yellow,
+    $color-yellow-darkened);
+}
+
+.panel-danger {
+  @include panel-variant(
+    $color-orange-darkened,
+    $color-white,
+    $color-orange,
+    $color-orange-darkened);
+}

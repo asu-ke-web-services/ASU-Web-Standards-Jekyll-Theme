@@ -2,13 +2,13 @@
 
 Looking for a way to contribute to the ASU Web Standards Bootstrap repo? **Here's how you can help.**
 
-Please take a moment to review this document, as well as the web design standards set out by the [Hub](hub.asu.edu).
+Please take a moment to review this document, as well as the web design standards set out by the [ASU Brand Guide](brandguide.asu.edu).
 
 ## Using the issue tracker
 
 The [issue tracker](https://github.com/gios-asu/ASU-Web-Standards-Bootstrap/issues) is the preferred chabel for [bug reports](#bug-reports), [features requests](#feature-requests) and [submitting pull requests](#pull-requests), but please respect the following restrictions:
 
-* Please **do not** use the issue tracker for personal support requests.  Please contact the team directly, the Hub, or the UTO department for personal support.
+* Please **do not** use the issue tracker for personal support requests.  Please contact the team directly on [slack](http://asuwebstandards.slack.com), the ASU Brandguide, or the UTO department for personal support.
 
 * Please **do not** derail issues.  Keep the discussion on topic.  Each issue should only have one issue in it.  If you have any tangential issues, please create a new issue.
 
@@ -90,11 +90,11 @@ included in the project:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/bootstrap.git
+   git clone https://github.com/<your-username>/ASU-Web-Standards-Bootstrap.git
    # Navigate to the newly cloned directory
    cd bootstrap
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/twbs/bootstrap.git
+   git remote add upstream https://github.com/gios-asu/ASU-Web-Standards-Bootstrap.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:

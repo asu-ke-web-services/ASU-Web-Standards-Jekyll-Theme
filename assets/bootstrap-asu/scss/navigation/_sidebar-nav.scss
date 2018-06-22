@@ -1,0 +1,161 @@
+// Sidebar
+//
+// Can be used with `.affix`. If you do want the sidebar to be affixed, you need
+// to add `id="sidebarNav"` and `class="affix"`. You should also use the push
+// and pull variants of the `col-*-*` classes.
+//
+// Here is an example of the columns, note that even though the sidebar
+// comes first in the markup, it will be on the *right* hand side of the
+// page:
+//
+// ```
+// <div class="col-sm-4 col-sm-push-8">[sidebar goes here]</div>
+// <div class="col-sm-8 col-sm-pull-4">[content goes here]</div>
+// ```
+//
+// Example sidebar (not affixed):
+//
+// Markup:
+// <div class="sidebar-nav">
+//   <h4>Sidebar Title</h4>
+//   <div class="list-group">
+//     <a class="list-group-item" data-scroll="" href="#">Link A</a>
+//     <a class="list-group-item" data-scroll="" href="#">Link B</a>
+//   </div>
+// </div>
+//
+// Example sidebar that is affixed:
+//
+// Markup:
+// <div id="sidebarNav" class="sidebar-nav affix-top">
+//   <h4>Sidebar Title</h4>
+//   <div class="list-group">
+//     <a class="list-group-item" data-scroll="" href="#">Link A</a>
+//     <a class="list-group-item" data-scroll="" href="#">Link B</a>
+//   </div>
+// </div>
+//
+// Sidebar Menu
+//
+// When a menu is generated in a sidebar, by using the [menu-list] shortcode,
+// the menu <ul> block is placed inside the <div class="sidebar-nav"> block,
+// as discussed above.
+//
+// Example sidebar menu (affixed):
+//
+// Markup:
+// <div id="sidebarNav" class="sidebar-nav affix-top">
+//   <h4>Sidebar Menu</h4>
+//   <ul id="sample-menu" class="menu">
+//     <li class="menu-item">
+//       <a class="menu-item" href="#">Menu Link A</a>
+//     </li>
+//     <li class="menu-item">
+//       <a class="menu-item" href="#">Menu Link B</a>
+//     </li>
+//     <li class="menu-item">
+//       <a class="menu-item" href="#">Menu Link C</a>
+//     </li>
+//   </ul>
+// </div>
+//
+// Styleguide navigation.sidebar
+.sidebar-nav {
+  border-top: $sidebar-border-top solid $color-maroon;
+  margin-bottom: $space-xxlarge;
+  padding: $space-xxlarge;
+  position: relative;
+
+  &::before {
+    background-color: $color-white;
+    border-bottom: $space-xsmall solid $color-gallery;
+    border-left: $space-xsmall solid $color-gallery;
+    border-right: $space-xsmall solid $color-gallery;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &.affix {
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $asu-screen-md-min) {
+      position: fixed;
+      top: $sidebar-offset-top;
+      width: $sidebar-medium-width;
+    }
+
+    @media (min-width: $asu-screen-lg-min) {
+      width: $sidebar-large-width;
+    }
+  }
+
+  a.active {
+    background-color: $color-wild-sand;
+    color: $color-maroon;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+  }
+
+  .menu {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  li.menu-item {
+    border: 0;
+    border-top: 1px solid $color-alto;
+    font-weight: $font-weight-light;
+    list-style: none;
+    /* Override the margin-bottom: -1px; that bootstrap provides */
+    margin-bottom: 0;
+    padding: 10px 5px;
+
+    &:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.current-menu-item,
+    &:hover,
+    &:focus {
+      background-color: $color-wild-sand;
+      border-color: $color-alto;
+
+      a.menu-item {
+        color: darken($color-maroon, 20%);
+        // This used to be heavier weight, but changing a font weight changes its size
+        font-weight: $font-weight-light;
+      }
+
+      .menu-item-text {
+        color: $color-white;
+      }
+    }
+  }
+
+  a.menu-item {
+    border-bottom: 0;
+    color: $color-maroon;
+    font-weight: $font-weight-light;
+
+    .menu-item-heading {
+      color: $color-maroon;
+    }
+  }
+}

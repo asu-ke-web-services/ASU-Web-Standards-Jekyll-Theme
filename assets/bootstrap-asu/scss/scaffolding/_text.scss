@@ -1,0 +1,57 @@
+// Text
+//
+// Markup: <p class="{{modifier_class}}">{{modifier_class}}</p>
+//
+// .text-center - Center text
+// .lead - enlarge text to emphasize that it is the start of a section
+// .small - descrease the font by 25%
+// .mark - highlight text
+//
+// Styleguide scaffolding.text
+p {
+  font-weight: $p__font-weight;
+  line-height: $p__line-height;
+  margin:      0 0 $p__margin-bottom;
+
+  &.text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size:     $lead__font-size;
+  font-weight:   $lead__font-weight;
+  line-height:   $lead__line-height;
+  margin-bottom: $lead__margin-bottom;
+  max-width:     1000px;
+
+  @media (min-width: $asu-screen-sm-min) {
+    font-size: $lead__font-size--large;
+  }
+}
+
+small,
+.small {
+  font-size: 75% !important;
+}
+
+mark,
+.mark {
+  background-color: $color-yellow;
+
+  a > & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Testing - Roboto Thin
+// May need to also consider adjusting other font properties (e.g. increase font size & line height)
+.thin {
+  font-weight: 100;
+}

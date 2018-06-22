@@ -1,0 +1,31 @@
+// Wells
+//
+// Use the well as a simple effect on an element to give it an inset effect.
+// Control padding and rounded corners with two optional modifier classes.
+//
+// Markup:
+// <div class="well">Look, I'm in a well!</div>
+//
+// Styleguide wells
+
+// Well Sizes
+//
+// Markup:
+// <div class="well {{modifier_class}}">Look, I'm in a well!</div>
+//
+// .well-lg - Large well
+// .well-sm - Small well
+//
+// Styleguide wells.sizes
+.well-lg {
+  border-radius: $border-radius;
+}
+
+.well-sm {
+  border-radius: $border-radius;
+}
+
+.close {
+  font-size: pem(24);
+  font-weight: $font-weight-normal;
+}

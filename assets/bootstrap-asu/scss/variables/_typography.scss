@@ -1,0 +1,68 @@
+// ==============================
+// Typography
+// ==============================
+//
+// Font as designated by the University Standards.  Do not use
+// Roboto Condensed.
+//
+// You can download this font directly from
+// the Android developers site:
+// http://developer.android.com/design/downloads/index.html
+//
+// It is also available as a Google Font:
+// http://www.google.com/fonts/specimen/Roboto
+$font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-mono: "Roboto Mono", "Lucida Console", Monaco, monospace;
+
+@function pem($pixels) {
+  @return #{$pixels / 16}rem
+}
+
+// ============
+// Font Weights
+// ============
+$font-weight-thin:   100;
+$font-weight-light:  300;
+$font-weight-normal: normal;
+$font-weight-bold:   bold;
+
+// ============
+// Line Heights
+// ============
+//
+// These line heights are NOT mixed up. When the text size increases,
+// the line height decreases.
+$line-height-base:     1.44 !default;
+$line-height-small:    1.5  !default;
+$line-height-large:    1.33 !default;
+$line-height-computed: 24px !default;
+$line-height-pem:      pem(24) !default;
+
+// ==========
+// Font Sizes
+// ==========
+$font-size-small:         pem(14) !default;
+$font-size-medium:        pem(16) !default;
+$font-size-large:         pem(18) !default;
+$font-size-xlarge:        pem(20) !default;
+
+$font-size-hero:          pem(38) !default;
+$font-size-hero-large:    pem(48) !default;
+$font-size-hero-h1:       pem(50) !default;
+$font-size-hero-h1-large: pem(60) !default;
+$font-size-hero-p:        pem(24) !default;
+
+// ==================
+// Special Font Sizes
+// ==================
+// ASU
+$font-size-mobile-menu: pem(22) !default;
+
+// Menu
+$line-height-menu:          1    !default;
+$line-height-computed-menu: 15px !default;
+$font-size-menu:            pem(15) !default;
+
+// Calendar
+$font-size-calendar:   pem(11) !default;
+$line-height-calendar: 1    !default;

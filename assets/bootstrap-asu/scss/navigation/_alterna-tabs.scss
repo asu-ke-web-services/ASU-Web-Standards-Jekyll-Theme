@@ -1,0 +1,63 @@
+// Alternative Tabs
+//
+// Used in conjunction with `.nav` and `.nav-tabs`
+//
+// Markup:
+// <ul class="nav nav-tabs alterna-tabs">
+//    <li class="active"><a href="#">Record A</a></li>
+//    <li><a href="#">Record B</a></li>
+//    <li><a href="#">Record C</a></li>
+// </ul>
+//
+// Styleguide navigation.alternative-tabs
+.alterna-tabs {
+  > li {
+    border-bottom: $space-base solid transparent;
+    border-top: 0;
+    margin-right: $space-xlarge;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &.active {
+      border-bottom: $space-base solid $color-maroon;
+      border-top: 0;
+      color: $color-dark-mine;
+
+      a {
+        &:hover,
+        &:focus,
+        &:hover,
+        &:focus {
+          background: none;
+        }
+      }
+    }
+
+    > a {
+      border: 0;
+      border-bottom-color: transparent;
+      border-radius: 0;
+      color: $color-dark-mine;
+      line-height: $line-height-base;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      background: none;
+      border: 0;
+      border-bottom-color: transparent;
+      color: $color-dark-mine;
+      cursor: default;
+    }
+  }
+}

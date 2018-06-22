@@ -1,0 +1,531 @@
+// Heros
+//
+// Heros are used at the top of pages to highlight the page name,
+// a description of the content, and an image to accent the page.
+//
+// Styleguide heros
+
+// Normal Hero
+//
+// Markup:
+// <div class="hero hero-bg-img" style="background-image: url(http://placehold.it/1000x800)">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-md-12">
+//         <h2>The School of Mathematical and Statistical Sciences</h2>
+//         <p>creates and disseminates research and provides outstanding instruction at the undergraduate and graduate levels in mathematics and statistics. Join us.</p>
+//         <div class="row">
+//           <div class="col-lg-4 col-md-5 col-sm-6 space-bot-sm">
+//             <button class="btn btn-blue btn-block" type="button">Undergraduate Programs</button>
+//           </div>
+//           <div class="col-lg-4 col-md-5 col-sm-6">
+//             <button class="btn btn-blue btn-block" type="button">Graduate Programs</button>
+//           </div>
+//         </div><!-- /.row -->
+//       </div>
+//     </div><!-- /.row -->
+//   </div><!-- /.container -->
+// </div>
+//
+// Styleguide heros.normal-hero
+.hero {
+  background-color: darken($color-mine-shaft, 8);
+  padding: 85px 0 (2 * $space-xxlarge);
+
+  h1,
+  h2,
+  .h1,
+  .h2 {
+    font-size: $font-size-hero;
+    letter-spacing: -1px;
+    margin-top: 0;
+    word-wrap: break-word;
+
+    @media (min-width: $asu-screen-sm-min) {
+      font-size: $font-size-hero-large;
+    }
+  }
+
+  h1,
+  h2,
+  p {
+    &.pop {
+      background-color: rgba(0, 0, 0, .8);
+      /*
+       * table is a little trick to have an inline-block look, but
+       * still break after each block
+       */
+      display: table;
+      padding: $space-large;
+
+      &::after {
+        clear: both;
+        content: ' ';
+      }
+    }
+  }
+
+  img {
+    border: $space-base solid $color-alto;
+  }
+}
+
+// ===========
+// Hero Images
+// ===========
+.hero-bg-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 350px;
+
+  h1,
+  h2,
+  .h1,
+  .h2 {
+    color: $color-white;
+    font-size: $font-size-hero-h1;
+    font-weight: $font-weight-normal;
+    line-height: 1;
+    margin-bottom: $space-large;
+    text-shadow: 0 0 $space-base rgba(0, 0, 0, .5);
+
+    @media (min-width: $asu-screen-sm-min) {
+      font-size: $font-size-hero-h1-large;
+    }
+  }
+
+  p {
+    color: $color-white;
+    font-size: $font-size-hero-p;
+    font-weight: $font-weight-normal;
+    max-width: 900px;
+    text-shadow: 0 0 $space-base rgba(0, 0, 0, .5);
+  }
+
+  .cite {
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1.3em;
+  }
+}
+
+// Text Only Hero
+//
+// Markup:
+// <div class="hero hero-text-only">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-md-12">
+//         <h2>A top university designed for you</h2>
+//         <p>Become a master learner—one who is able to thrive in tomorrow's dynamic work environment—at one of the world's most innovative universities today.</p>
+//         <button class="btn btn-primary" type="button">See more rankings</button>
+//       </div>
+//     </div><!-- /.row -->
+//   </div><!-- /.container -->
+// </div>
+//
+// Styleguide heros.text-only-hero
+.hero-text-only {
+  text-align: center;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    color: $color-white;
+  }
+
+  p {
+    color: $color-white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Text Only Dark Hero
+//
+// Markup:
+// <div class="hero hero-text-only hero-text-only-dark">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-md-12">
+//         <h2>A top university designed for you</h2>
+//         <p>Become a master learner—one who is able to thrive in tomorrow's dynamic work environment—at one of the world's most innovative universities today.</p>
+//         <button class="btn btn-primary" type="button">See more rankings</button>
+//       </div>
+//     </div><!-- /.row -->
+//   </div><!-- /.container -->
+// </div>
+//
+// Styleguide heros.text-only-hero.dark
+.hero-text-only-dark {
+  background-color: $color-mine-shaft;
+  text-align: center;
+
+  h1,
+  h2 {
+    color: $color-white;
+  }
+
+  p {
+    color: $color-white;
+  }
+}
+
+// Video Hero
+//
+// TODO document
+//
+// Styleguide heros.video-hero
+.hero-video {
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: $asu-screen-sm-min) {
+    min-height: 500px;
+  }
+
+  video {
+    height: inherit !important;
+    max-width: 100%;
+    width: 100% !important;
+
+    @media (min-width: $asu-screen-sm-min) {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  > .container {
+    @media (min-width: $asu-screen-sm-min) {
+      bottom: $space-large;
+      position: absolute;
+      z-index: 12;
+    }
+  }
+}
+
+// Mobile Hero
+//
+// Go mobile to view this section:
+//
+// Markup:
+// <div class="override">
+//     <div class="hero-mobile" style="background-color: #1e73be;">
+//         <h1 class="pane-title" style="">Global Sustainability</h1>
+//         <div class="pane-content" style="">
+//             <p>Improving human well-being and ensuring social equity for present and future generations</p>
+//         </div>
+//     </div>
+// </div>
+//
+// Styleguide heros.mobile-hero
+.hero-mobile {
+  display: none;
+  font-size: $font-size-xlarge;
+  font-weight: $font-weight-light;
+
+  .pane-title {
+    color: white;
+    display: block;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-normal;
+    margin: 0;
+    padding: $space-xlarge $space-xxlarge;
+  }
+
+  .pane-content {
+    color: white;
+    font-size: $font-size-large;
+    padding: $space-xxlarge;
+  }
+
+  p {
+    margin: 0 0 $space-large;
+  }
+}
+
+// Ratio Hero
+//
+// Markup:
+// <div class="panel-display clearfix">
+//   <div class="hero-ratio">
+//       <img src="http://placehold.it/1000x300" class="image-hero">
+//       <div class="container">
+//           <div class="row">
+//               <div class="fdt-home-container fdt-home-column-content clearfix panel-panel row-fluid container">
+//                   <div class="fdt-home-column-content-region fdt-home-row panel-panel span12">
+//                       <div class="panel-pane pane-fieldable-panels-pane pane-fpid-12 pane-bundle-text">
+//                           <h1 class="pane-title" style="color:">Global Sustainability</h1>
+//                           <div class="pane-content">
+//                               <div class="fieldable-panels-pane">
+//                                   <div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden">
+//                                       <div class="field-items">
+//                                           <div class="field-item even" style="color:">
+//                                               <p>Improving human well-being and ensuring social equity for present and future generations</p>
+//                                           </div>
+//                                       </div>
+//                                   </div>
+//                               </div>
+//                           </div>
+//                       </div>
+//                   </div>
+//               </div>
+//           </div>
+//       </div>
+//   </div>
+// </div>
+//
+// Styleguide heros.ratio
+
+// Slim Hero
+//
+// Markup:
+// <div class="panel-display clearfix">
+//     <section class="hero-slim theme-color-background" style="background-image: url(http://placehold.it/1000x50)">
+//         <div class="container">
+//             <div class="row">
+//                 <div class="fdt-home-container fdt-home-column-content clearfix panel-panel row-fluid container">
+//                     <div class="fdt-home-column-content-region fdt-home-row panel-panel span12">
+//                         <div class="panel-pane pane-fieldable-panels-pane pane-fpid-12 pane-bundle-text">
+//                             <h1 class="pane-title" style="color:">Title</h1>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </section>
+// </div>
+//
+// Styleguide heros.slim
+.hero-ratio,
+.hero-slim {
+  background-color: $color-alto;
+  position: relative;
+  width: 100%;
+
+  .panel-pane {
+    font-weight: $font-weight-light;
+    line-height: 30px;
+    margin-top: 3%;
+
+    .pane-title {
+      color: white;
+      display: block;
+      font-size: $hero-title__font-size;
+      font-weight: $font-weight-bold;
+      margin: 0;
+      padding: 0;
+      text-shadow: rgba(0, 0, 0, .7) 1px 1px 1px;
+
+      @media(max-width: $asu-screen-md-max) {
+        font-size: $hero-title__font-size;
+      }
+
+      @media(max-width: $asu-screen-sm-max + 100) {
+        font-size: $hero-title__font-size--small;
+      }
+
+      @media(max-width: $asu-screen-sm-max) {
+        font-size: $hero-title__font-size--smallest;
+      }
+    }
+  }
+}
+
+
+// =========
+// Slim Hero
+// =========
+.hero-slim {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: $hero-slim-height;
+
+  .panel-pane {
+    margin-top: 14px;
+
+    @media(max-width: $asu-screen-md-max) {
+      margin-bottom: 8px;
+    }
+
+    @media(max-width: $asu-screen-sm-max + 100) {
+      margin-bottom: 18px;
+      margin-top: 18px;
+    }
+
+    @media(max-width: $asu-screen-xs-max) {
+      vertical-align: middle;
+    }
+  }
+
+  @media(max-width: $asu-screen-xs-max) {
+    .panel-panel {
+      &.row-fluid {
+        display: block;
+      }
+
+      &.span12 {
+        display: table;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ==========
+// Ratio Hero
+// ==========
+.hero-ratio {
+  padding-bottom: $hero-ratio;
+
+  img {
+    left: 0;
+    min-height: $hero-ratio;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .container {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .panel-pane {
+    width: 50%;
+
+    .pane-title {
+      // pane-title is in panel-pane which is in a container
+      // so this will never exceed the width of the entire body.
+      // Instead this will just make the pane-title take up
+      // at most the width of the container.
+      width: 200%;
+
+      @media(min-width: $asu-screen-lg-min) {
+        font-size: $ratio-hero-title__font-size;
+      }
+    }
+
+    .pane-content {
+      color: white;
+      font-weight: $font-weight-bold;
+      margin: -14px 0 0;
+      padding-top: 8px;
+      text-shadow: rgba(0, 0, 0, .7) 1px 1px 1px;
+
+      @media(max-width: $asu-screen-md-max) {
+        font-size: .9em;
+        margin-top: -18px;
+      }
+
+      @media(max-width: $asu-screen-xs-max) {
+        display: none;
+      }
+    }
+
+    p {
+      font-weight: $font-weight-bold;
+      margin: 0 0 14px;
+
+      @media(max-width: $asu-screen-md-max) {
+        margin: 0 0 10px;
+     }
+    }
+  }
+}
+
+// Only show the mobile section on the home page
+// Only hide the panel pane on the home page
+// scss-lint:disable QualifyingElement
+body.home,
+.override {
+  .hero-ratio .panel-pane {
+    @media(max-width: $asu-screen-xs-max) {
+      display: none;
+    }
+  }
+
+  .hero-mobile {
+    @media(max-width: $asu-screen-xs-max) {
+      display: block;
+    }
+  }
+}
+
+// scss-lint:enable QualifyingElement
+
+// Tall Hero
+//
+// Markup:
+// <div class="hero hero-bg-img hero-tall" style="background-image: url(http://placehold.it/1000x1000)">
+//   <div class="container-fluid">
+//     <div class="row">
+//       <div class="col-md-12">
+//         <h2>The School of Mathematical and Statistical Sciences</h2>
+//         <p>creates and disseminates research and provides outstanding instruction at the undergraduate and graduate levels in mathematics and statistics. Join us.</p>
+//         <div class="row">
+//           <div class="col-lg-4 col-md-5 col-sm-6 space-bot-sm">
+//             <button class="btn btn-blue btn-block" type="button">Undergraduate Programs</button>
+//           </div>
+//           <div class="col-lg-4 col-md-5 col-sm-6">
+//             <button class="btn btn-blue btn-block" type="button">Graduate Programs</button>
+//           </div>
+//         </div><!-- /.row -->
+//       </div>
+//     </div><!-- /.row -->
+//   </div><!-- /.container -->
+// </div>
+//
+// Styleguide heros.tall
+.hero-tall {
+  min-height: 50%;
+  min-height: 50vh;
+
+  p,
+  h1.pane-title {
+    text-align: center;
+    text-shadow: 0 0 5px rgb(48, 42, 42);
+  }
+
+  h1.pane-title {
+    font-size: $tall-hero-title__font-size;
+  }
+
+  form {
+    margin: auto;
+    min-width: 400px;
+    text-align: center;
+    width: 50%;
+  }
+
+  &.hero-bg-img p {
+    max-width: none;
+  }
+}
+
+@media(max-width: $asu-screen-xs-max) {
+  .hero-ratio,
+  .hero-slim,
+  .hero-mobile,
+  .hero {
+    &.hide-on-small {
+      display: none !important;
+    }
+  }
+}

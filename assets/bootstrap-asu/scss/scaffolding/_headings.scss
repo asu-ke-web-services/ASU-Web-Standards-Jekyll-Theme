@@ -1,0 +1,146 @@
+// Headings
+//
+// Styles for different sized headings are provided for your convenience.
+//
+// Markup:
+// <h1>Heading 1</h1>
+// <h2>Heading 2</h2>
+// <h3>Heading 3</h3>
+// <h4>Heading 4</h4>
+// <h5>Heading 5</h5>
+// <h6>Heading 6</h6>
+//
+// Styleguide scaffolding.headings
+
+// Headings Using Modifiers
+//
+// You can also style any text to look like a heading by using classes instead of markup.
+// This should be refrained from though since it will not be accessible by screen readers.
+//
+// Markup:
+// <span class="h1">Heading 1</span><br/>
+// <span class="h2">Heading 2</span><br/>
+// <span class="h3">Heading 3</span><br/>
+// <span class="h4">Heading 4</span><br/>
+// <span class="h5">Heading 5</span><br/>
+// <span class="h6">Heading 6</span><br/>
+//
+// Styleguide scaffolding.headings-using-modifiers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $color-black;
+  font-family: inherit;
+  font-weight: $font-weight-normal;
+
+  .sidebar-nav > &,
+  .panel-body > & {
+    margin-top: 0;
+  }
+
+  @media (min-width: $asu-screen-sm-min) {
+    margin-top: 0;
+  }
+}
+
+h1,
+.h1 {
+  font-size:     $h1__font-size;
+  line-height:   $h1__line-height;
+  margin-bottom: $h1__margin-bottom;
+  margin-top:    $h1__margin-top;
+
+  @media(max-width: $asu-screen-xs-max) {
+    font-size: $h1__font-size--small;
+  }
+}
+
+h2,
+.h2 {
+  font-size:     $h2__font-size;
+  line-height:   $h2__line-height;
+  margin-bottom: $h2__margin-bottom;
+  margin-top:    $h2__margin-top;
+
+  @media(max-width: $asu-screen-xs-max) {
+    font-size: $h2__font-size--small;
+  }
+}
+
+h3,
+.h3 {
+  font-size:     $h3__font-size;
+  line-height:   $h3__line-height;
+  margin-bottom: $h3__margin-bottom;
+  margin-top:    $h3__margin-top;
+
+  @media(max-width: $asu-screen-xs-max) {
+    font-size: $h3__font-size--small;
+  }
+}
+
+h4,
+.h4 {
+  font-size:     $h4__font-size;
+  line-height:   $h4__line-height;
+  margin-bottom: $h4__margin-bottom;
+  margin-top:    $h4__margin-top;
+}
+
+h5,
+.h5 {
+  font-size:     $h5__font-size;
+  font-weight:   $font-weight-bold;
+  line-height:   $h5__line-height;
+  margin-bottom: $h5__margin-bottom;
+  margin-top:    $h5__margin-top;
+}
+
+h6,
+.h6 {
+  font-size:     $h6__font-size;
+  font-style:    italic;
+  font-weight:   $font-weight-light;
+  line-height:   $h6__line-height;
+  margin-bottom: $h6__margin-bottom;
+  margin-top:    $h6__margin-top;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  small,
+  .small {
+    color: $color-boulder;
+    font-size: 65%;
+    font-weight: $font-weight-normal;
+    line-height: 1;
+  }
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  small,
+  .small {
+    color: $color-boulder;
+    font-size: 75%;
+    font-weight: $font-weight-normal;
+    line-height: 1;
+  }
+}

@@ -1,0 +1,152 @@
+// Scaffolding
+//
+// Styleguide scaffolding
+
+@import 'scaffolding/basic';
+@import 'scaffolding/grid';
+@import 'scaffolding/links';
+@import 'scaffolding/images';
+@import 'scaffolding/rulers';
+@import 'scaffolding/headings';
+@import 'scaffolding/text';
+@import 'scaffolding/text-variants';
+@import 'scaffolding/background-variants';
+
+// TODO refactor
+#asu_header {
+  header {
+    position: relative;
+    z-index: 100000;
+  }
+}
+
+.page-header {
+  margin: 0 0 ($line-height-computed);
+  padding-bottom: 11px;
+}
+
+@import 'scaffolding/lists';
+
+
+blockquote {
+  font-size: $blockquote__font-size;
+  margin: 0 0 ($line-height-computed);
+  padding: ($line-height-computed / 2) ($line-height-computed);
+
+  footer,
+  small,
+  .small {
+    line-height: $line-height-base;
+  }
+}
+
+address {
+  font-weight: $font-weight-light;
+  line-height: $line-height-base;
+  margin-bottom: ($line-height-computed);
+
+  strong {
+    font-weight: $font-weight-normal;
+  }
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-mono;
+}
+
+kbd {
+  -webkit-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+pre {
+  font-size: $pre__font-size;
+  line-height: $line-height-base;
+  margin: 0 0 ($line-height-computed / 2);
+  padding: 11.5px;
+}
+
+/* order matters! Gray back before spacing rules! */
+.gray-back {
+  background-color: $color-seashell;
+  padding: 48px 0;
+}
+
+.gold-back {
+  background-color: $color-gold;
+}
+
+@import 'scaffolding/spacing';
+
+
+.row-same-height {
+  display: table;
+
+  [class*="col-xs-"] {
+    @media (min-width: $asu-screen-xs-min) {
+      @include same-height;
+    }
+  }
+
+  [class*="col-sm-"] {
+    @media (min-width: $asu-screen-sm-min) {
+      @include same-height;
+    }
+  }
+
+  [class*="col-md-"] {
+    @media (min-width: $asu-screen-md-min) {
+      @include same-height;
+    }
+  }
+
+  [class*="col-lg-"] {
+    @media (min-width: $asu-screen-lg-min) {
+      @include same-height;
+    }
+  }
+}
+
+.color-maroon {
+  background-color: $color-maroon;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: white;
+  }
+}
+
+// scss-lint:disable PropertySortOrder
+code {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+// scss-lint:enable PropertySortOrder
+
+.site-content {
+  .container {
+    padding-bottom: 48px;
+    padding-top: 48px;
+
+    .container + & {
+      padding-top: 0;
+    }
+  }
+
+  .gray-back .container,
+  .gold-back .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+

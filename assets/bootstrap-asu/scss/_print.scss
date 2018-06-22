@@ -1,0 +1,102 @@
+// ==========================================================================
+// Print style
+// Inlined to avoid the additional HTTP request:
+// http://www.phpied.com/delay-loading-your-print-css/
+//
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+// ==========================================================================
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important; /* Black prints faster:
+                               http://www.sanbeiji.com/archives/953 */
+    text-shadow: none !important;
+  }
+
+  html {
+    font-size: 75%;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    clear: both;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    page-break-after: avoid;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: none;
+  }
+
+  .site-content .container,
+  .gray-back,
+  article.post {
+    padding: 5px !important;
+  }
+
+  .asu-breadcrumbs .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .hr {
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    padding-right: 5px;
+  }
+
+  img,
+  .img-100,
+  .btn-block {
+    max-width: 33% !important;
+  }
+
+  .embed-responsive-16by9 {
+    padding-bottom: 0;
+  }
+
+  #asu-mobile-menu,
+  #asu_mobile_menu_button,
+  #asu_mobile_search_button,
+  #asu-search,
+  #asu-mobile-menu a,
+  #asu_mobile_menu_button a,
+  #asu_mobile_search_button a,
+  #asu-search a,
+  .footer,
+  .hero-ratio,
+  .navbar,
+  .social-media {
+    display: none !important;
+  }
+
+  .navbar {
+    display: initial;
+  }
+
+  .navbar-ws .navbar-brand {
+    font-size: 1.9rem;
+  }
+}

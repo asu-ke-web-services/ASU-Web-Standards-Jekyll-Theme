@@ -1,0 +1,250 @@
+// Pagination
+//
+// Use code like the following to render a pagination navigator component.
+//
+// Markup:
+// <nav aria-label="Pagination">
+//   <ul class="pagination">
+//     <li><a href="#/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+//     <li><a href="#/">1</a></li>
+//     <li><a href="#/">2</a></li>
+//     <li><a href="#/">3</a></li>
+//     <li class="disabled"><a href="#/"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>
+//     <li class="pagination-dropdown active">
+//       <a href="#/" onclick="return false;" class="pagination-dropdown__link">
+//         <select id="pagination-selector" class="pagination-dropdown__select pagination-dropdown__select--active">
+//           <option value="1">1</option>
+//           <option value="2">2</option>
+//           <option value="3">3</option>
+//           <option value="4" selected="selected">4</option>
+//           <option value="5">5</option>
+//           <option value="6">6</option>
+//           <option value="7">7</option>
+//         </select>
+//       </a>
+//     </li>
+//     <!-- The following script needs to be passed the base url to use
+//       in the redirection. -->
+//     <script>
+//       /*
+//       document.getElementById ( 'pagination-selector' ).onchange = function ( e ) {
+//         window.location.href = '$base_url' + e.target.value;
+//       };
+//       */
+//     </script>
+//     <li class="disabled"><a href="#/"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>
+//     <li><a href="#/">5</a></li>
+//     <li><a href="#/">6</a></li>
+//     <li><a href="#/">7</a></li>
+//     <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide pagination
+.pagination {
+  margin: $space-xxlarge 0;
+
+  > li {
+    > a {
+      color: $color-maroon;
+      line-height: $line-height-base;
+      padding: $space-base $space-xlarge;
+
+      &:hover,
+      &:focus {
+        background-color: $color-gallery;
+        border-color: $color-gallery;
+        color: $color-brick-red;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $color-maroon;
+        border-color: $color-maroon;
+      }
+    }
+  }
+
+  .pagination-dropdown {
+    :focus,
+    :hover {
+      background-color: $color-gallery;
+      border-color: $color-gallery;
+      color: $color-brick-red;
+    }
+
+    .pagination-dropdown--large {
+      font-size: $font-size-large;
+    }
+
+    .pagination-dropdown--small {
+      font-size: $font-size-small;
+    }
+
+    .pagination-dropdown__link {
+      height: 37px;
+      padding: 0;
+    }
+
+    .pagination-dropdown__select {
+      border: 0;
+      border-radius: 0;
+      font-size: $font-size-large;
+      height: 30px;
+      margin: 0; /* remove default margins */
+      padding: 3px 10px;
+    }
+
+    .pagination-dropdown__select--active {
+      background-color: $color-maroon;
+      border-color: $color-maroon;
+      color: $color-white;
+
+      &:focus,
+      &:hover {
+        background-color: $color-maroon;
+        border-color: $color-maroon;
+        color: $color-gallery;
+      }
+
+      > option {
+        background-color: $color-white;
+        color: $color-maroon;
+      }
+    }
+
+    .pagination-dropdown__select--inactive {
+      background-color: $color-white;
+      color: $color-maroon;
+
+      &:focus,
+      &:hover {
+        background-color: $color-gallery;
+        border-color: $color-gallery;
+        color: $color-brick-red;
+      }
+
+      > option {
+        background-color: $color-white;
+        color: $color-maroon;
+      }
+    }
+  }
+}
+
+@supports (pointer-events: none) and
+    ((-webkit-appearance: none) or
+    (-moz-appearance: none) or
+    (appearance: none)) {
+  .pagination {
+    .pagination-dropdown {
+      vertical-align: middle;
+
+      &.pagination-dropdown--disabled::after {
+        color: rgba(0, 0, 0, .6);
+      }
+
+      .pagination-dropdown__link {
+        &::before,
+        &::after {
+          content: '';
+          pointer-events: none;
+          position: absolute;
+        }
+
+        &::after { /*  Custom dropdown arrow */
+          content: '\25BC';
+          font-size: $font-size-medium;
+          height: 1em;
+          line-height: 1;
+          margin-top: -.5em;
+          right: .7em;
+          top: 50%;
+        }
+
+        &::before { /*  Custom dropdown arrow cover */
+          bottom: 0;
+          right: 0;
+          top: 0;
+          width: 2em;
+        }
+      }
+
+      .pagination-dropdown__select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 1.5em; /* accommodate the pseudo elements for the dropdown arrow */
+      }
+
+      .pagination-dropdown__select[disabled] {
+        color: rgba(0, 0, 0, .3);
+      }
+    }
+  }
+}
+
+.pagination-lg {
+  > {
+    li {
+      a,
+      span {
+        font-size: $font-size-large;
+        padding: $space-large $space-xxlarge;
+      }
+
+      &:first-child > {
+        a,
+        span {
+          border-bottom-left-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+      }
+
+      &:last-child > {
+        a,
+        span {
+          border-bottom-left-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+
+.pagination-sm {
+  > {
+    li {
+      a,
+      span {
+        font-size: $font-size-small;
+        padding: $space-base $space-large;
+      }
+
+      &:first-child > {
+        a,
+        span {
+          border-bottom-left-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+      }
+
+      &:last-child > {
+        a,
+        span {
+          border-bottom-left-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+
+.pager {
+  margin: $space-xxlarge 0;
+}

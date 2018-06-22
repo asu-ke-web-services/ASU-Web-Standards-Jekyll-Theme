@@ -1,0 +1,49 @@
+// Dropdowns
+.caret {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  margin-left: 0;
+}
+
+.dropdown-menu {
+  font-size: $font-size-medium;
+  max-height: 400px;
+  overflow: auto;
+
+  .divider {
+    margin: 11px 0;
+  }
+
+  > li > a {
+    border-bottom: 0;
+    line-height: $line-height-base;
+
+    &:hover,
+    &:focus {
+      border-bottom: 0;
+    }
+  }
+
+  > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $color-maroon;
+      border-bottom: 0;
+
+    }
+  }
+}
+
+.dropdown-header {
+  font-size: $font-size-small;
+  line-height: $line-height-base;
+}
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  .caret {
+    border-bottom: 5px solid;
+  }
+}

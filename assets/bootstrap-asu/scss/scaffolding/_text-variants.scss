@@ -1,0 +1,43 @@
+// Text Variants
+//
+// Markup: <p class="{{modifier_class}}">.{{modifier_class}}</p>
+//
+// .text-yellow - Yellow Text
+// .text-green - Green Text
+// .text-primary - Maroon Text
+// .text-maroon - Alias of `text-primary`
+// .text-success - Green Text
+// .text-info - Blue Text
+// .text-warning - Yellow Text
+// .text-danger - Orange Text
+// .text-white - White Text
+//
+// Styleguide scaffolding.text-variants
+
+// Text Variant Links
+//
+// All text variants can be used with links. When
+// used as a link, the text will automatically darken:
+//
+// Markup: <a href="#" class="{{modifier_class}}">.{{modifier_class}}</a>
+//
+// .text-yellow - Yellow Text
+// .text-green - Green Text
+// .text-primary - Maroon Text
+// .text-maroon - Alias of `text-primary`
+// .text-success - Green Text
+// .text-info - Blue Text
+// .text-warning - Yellow Text
+// .text-danger - Orange Text
+// .text-white - White Text
+//
+// Styleguide scaffolding.text-variants-links
+@include text-emphasis-variant('.text-yellow', $color-yellow);
+@include text-emphasis-variant('.text-green', $color-green);
+@include text-emphasis-variant('.text-maroon', $color-maroon);
+@include text-emphasis-variant('.text-primary', $color-maroon);
+@include text-emphasis-variant('.text-success', $color-green);
+@include text-emphasis-variant('.text-info', $color-blue);
+@include text-emphasis-variant('.text-warning', $color-yellow);
+@include text-emphasis-variant('.text-danger', $color-orange);
+@include text-emphasis-variant('.text-white', $color-white);

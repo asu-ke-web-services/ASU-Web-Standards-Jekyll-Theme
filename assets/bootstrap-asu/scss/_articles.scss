@@ -1,0 +1,31 @@
+// Articles
+//
+// Simple scaffolding for a list of news articles
+article {
+  &.news {
+    margin-bottom: $space-large;
+    margin-top: 0;
+    padding: $space-xlarge;
+  }
+}
+
+.news-slider-img {
+  padding-top: $line-height-computed;
+}
+
+.pager {
+  margin: 0;
+
+  .next > a,
+  .next > span {
+    float: left;
+    margin-left: 30px;
+  }
+
+  .all-news > a,
+  .all-news > span {
+    background-color: $color-wild-sand;
+    float: right;
+  }
+}
+

@@ -1,0 +1,21 @@
+// Thumbnails
+//
+// TODO document
+//
+// Styleguide thumbnails
+.thumbnail {
+  line-height: $line-height-base;
+  margin-bottom: $space-xxlarge;
+
+  .captions {
+    color: $color-dark-mine;
+  }
+}
+
+a.thumbnail {
+  &:hover,
+  &:focus,
+  &.active {
+    border-color: $color-maroon;
+  }
+}

@@ -11,19 +11,20 @@
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-561868-49', 'auto');
     ga('send', 'pageview');
 
   </script>
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="all.css">
 
 </head>
@@ -173,6 +174,24 @@
           ><span class="kss-nav__name">Tables</span>
         </a>
         <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-tables.html#kssref-tables-bordered">
+                <span class="kss-nav__ref">22.1</span
+                ><span class="kss-nav__name">Table with Borders</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-tables.html#kssref-tables-striped">
+                <span class="kss-nav__ref">22.2</span
+                ><span class="kss-nav__name">Striped Rows</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-tables.html#kssref-tables-striped-and-bordered">
+                <span class="kss-nav__ref">22.3</span
+                ><span class="kss-nav__name">Bordered and Striped</span>
+              </a>
+            </li>
         </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -209,16 +228,373 @@
 
 
       <div class="kss-description">
-        <p>TODO document</p>
+        <p>Normal Table</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
 
       </div>
+      <section id="kssref-tables-bordered" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-tables-bordered">
+          <span class="kss-title__ref">
+              22.1
+          </span>
+          Table with Borders
+          <span class="kss-title__permalink-hash">
+              #tables.bordered
+          </span>
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;table table-bordered&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-tables-striped" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-tables-striped">
+          <span class="kss-title__ref">
+              22.2
+          </span>
+          Striped Rows
+          <span class="kss-title__permalink-hash">
+              #tables.striped
+          </span>
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;table table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-tables-striped-and-bordered" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-tables-striped-and-bordered">
+          <span class="kss-title__ref">
+              22.3
+          </span>
+          Bordered and Striped
+          <span class="kss-title__permalink-hash">
+              #tables.striped-and-bordered
+          </span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>See: <a href="https://getbootstrap.com/css/#tables">even more examples from Bootstrap</a></p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+
+      </section>
+
+<div class='article-footnote'>
+  <div class="panel panel-default">
+    <div class="panel-body">
+  Got Questions? ask them on the <a href="http://asuwebstandards.slack.com/"><i class="fa fa-slack" aria-hidden="true"></i> ASU Web Standards
+ Slack Channel</a>
+    </div>
+  </div>
+</div>
+
 </article>
 
 <!-- SCRIPTS -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script>
@@ -228,6 +604,7 @@
   <footer class="kss-github">
 
     <a class="no-border" href="https://github.com/gios-asu/ASU-Web-Standards-Bootstrap"><img src="public/github-fork--black.png" alt="Fork me on GitHub"></a>
+
   </footer>
 
 <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

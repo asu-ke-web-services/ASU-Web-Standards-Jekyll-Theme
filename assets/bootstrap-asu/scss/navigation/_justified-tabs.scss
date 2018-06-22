@@ -1,0 +1,71 @@
+// Justified Navs
+//
+// Can be used with `.nav-tabs`, or `.alterna-tabs`
+//
+// Markup:
+// <ul class="nav nav-tabs nav-justified">
+//   <li role="presentation" class="active"><a href="#">Home</a></li>
+//   <li role="presentation"><a href="#">Profile</a></li>
+//   <li role="presentation"><a href="#">Messages</a></li>
+// </ul>
+//
+// Styleguide navigation.justified-navs
+
+// Justified Alternative Nav
+//
+// Markup:
+// <ul class="nav nav-tabs alterna-tabs nav-justified">
+//   <li role="presentation" class="active"><a href="#">Home</a></li>
+//   <li role="presentation"><a href="#">Profile</a></li>
+//   <li role="presentation"><a href="#">Messages</a></li>
+// </ul>
+//
+// Styleguide navigation.justified-navs-alternative
+.nav-justified,
+.nav-tabs.nav-justified,
+.alterna-tabs.nav-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+
+    > a {
+      margin-bottom: $space-base;
+      text-align: center;
+    }
+  }
+}
+
+// Alias
+.nav-tabs-justified,
+.nav-tabs.nav-justified {
+  border-bottom: 0;
+
+  > li > a {
+    border-radius: $border-radius;
+    margin-right: 0;
+  }
+
+  > .active > a {
+    &,
+    :hover,
+    &:focus {
+      border: $space-xsmall solid $color-gallery;
+    }
+  }
+
+  @media (min-width: $asu-screen-md-min) {
+    > li > a {
+      border-bottom: $space-xsmall solid $color-gallery;
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    > .active > a {
+      &,
+      :hover,
+      &:focus {
+        border-bottom-color: $color-white;
+      }
+    }
+  }
+}

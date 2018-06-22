@@ -11,19 +11,20 @@
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-561868-49', 'auto');
     ga('send', 'pageview');
 
   </script>
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="all.css">
 
 </head>
@@ -576,7 +577,31 @@ comes first in the markup, it will be on the <em>right</em> hand side of the
 page:</p>
 <pre><code>&lt;div class=&quot;col-sm-4 col-sm-push-8&quot;&gt;[sidebar goes here]&lt;/div&gt;
 &lt;div class=&quot;col-sm-8 col-sm-pull-4&quot;&gt;[content goes here]&lt;/div&gt;
-</code></pre><p>Example sidebar:</p>
+</code></pre><p>Example sidebar (not affixed):</p>
+<p>Markup:</p>
+<div class="sidebar-nav">
+  <h4>Sidebar Title</h4>
+  <div class="list-group">
+    <a class="list-group-item" data-scroll="" href="#">Link A</a>
+    <a class="list-group-item" data-scroll="" href="#">Link B</a>
+  </div>
+</div>
+
+<p>Example sidebar that is affixed:</p>
+<p>Markup:</p>
+<div id="sidebarNav" class="sidebar-nav affix-top">
+  <h4>Sidebar Title</h4>
+  <div class="list-group">
+    <a class="list-group-item" data-scroll="" href="#">Link A</a>
+    <a class="list-group-item" data-scroll="" href="#">Link B</a>
+  </div>
+</div>
+
+<p>Sidebar Menu</p>
+<p>When a menu is generated in a sidebar, by using the [menu-list] shortcode,
+the menu <ul> block is placed inside the <div class="sidebar-nav"> block,
+as discussed above.</p>
+<p>Example sidebar menu (affixed):</p>
 
       </div>
     </div>
@@ -586,23 +611,37 @@ page:</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="sidebar-nav">
-  <h4>Sidebar Title</h4>
-  <div class="list-group">
-    <a class="list-group-item" data-scroll="" href="#">Link A</a>
-    <a class="list-group-item" data-scroll="" href="#">Link B</a>
-  </div>
+          <div id="sidebarNav" class="sidebar-nav affix-top">
+  <h4>Sidebar Menu</h4>
+  <ul id="sample-menu" class="menu">
+    <li class="menu-item">
+      <a class="menu-item" href="#">Menu Link A</a>
+    </li>
+    <li class="menu-item">
+      <a class="menu-item" href="#">Menu Link B</a>
+    </li>
+    <li class="menu-item">
+      <a class="menu-item" href="#">Menu Link C</a>
+    </li>
+  </ul>
 </div>
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;sidebar-nav&quot;&gt;
-  &lt;h4&gt;Sidebar Title&lt;/h4&gt;
-  &lt;div class=&quot;list-group&quot;&gt;
-    &lt;a class=&quot;list-group-item&quot; data-scroll=&quot;&quot; href=&quot;#&quot;&gt;Link A&lt;/a&gt;
-    &lt;a class=&quot;list-group-item&quot; data-scroll=&quot;&quot; href=&quot;#&quot;&gt;Link B&lt;/a&gt;
-  &lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div id=&quot;sidebarNav&quot; class=&quot;sidebar-nav affix-top&quot;&gt;
+  &lt;h4&gt;Sidebar Menu&lt;/h4&gt;
+  &lt;ul id=&quot;sample-menu&quot; class=&quot;menu&quot;&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
+      &lt;a class=&quot;menu-item&quot; href=&quot;#&quot;&gt;Menu Link A&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
+      &lt;a class=&quot;menu-item&quot; href=&quot;#&quot;&gt;Menu Link B&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
+      &lt;a class=&quot;menu-item&quot; href=&quot;#&quot;&gt;Menu Link C&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
       </div>
 
@@ -624,7 +663,8 @@ page:</p>
 
 
       <div class="kss-description">
-        <p>Just like in Bootstrap, but styled differently, uses <code>navbar</code></p>
+        <p>Just like in Bootstrap, but styled differently, uses <code>navbar</code>. Dropdown menus must include caret icon as styled here.</p>
+<p>Additionally, a Navbar Button is available for special uses. All Alternative Button Colors are available for styling the Navbar Button.</p>
 
       </div>
     </div>
@@ -649,13 +689,13 @@ page:</p>
             <ul id="menu-header-menu" class="nav navbar-nav">
                 <li><a href="#" id="home-icon-main-nav"><span class="fa fa-home hidden-xs hidden-sm" aria-hidden="true"></span><span class="hidden-md hidden-lg">Home</span></a>
                 </li>
-                <li class="menu-item"><a title="Outreach" href="#" id="nav-item_outreach">Outreach</a>
+                <li class="menu-item"><a title="Simple Dropdown" href="#" id="nav-item_outreach">Simple Dropdown <span class="caret"></span></a>
                 </li>
-                <li class="menu-item"><a title="Research" href="#" id="nav-item_research">Research</a>
+                <li class="menu-item"><a title="Super Menu" href="#" id="nav-item_research">Super Menu <span class="caret"></span></a>
                 </li>
-                <li class="menu-item"><a title="Solutions" href="#" id="nav-item_solutions">Solutions</a>
+                <li class="menu-item"><a title="Tabbed Menu" href="#" id="nav-item_solutions">Tabbed Menu</a>
                 </li>
-                <li class="menu-item"><a title="Operations" href="#" id="nav-item_operations">Operations</a>
+                <li class="menu-item menu-btn-navbar"><a title="Navbar Button" href="#" id="nav-item_button" class="btn-navbar btn btn-gold">Navbar Button</a>
                 </li>
             </ul>
         </div>
@@ -681,13 +721,13 @@ page:</p>
             &lt;ul id=&quot;menu-header-menu&quot; class=&quot;nav navbar-nav&quot;&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;home-icon-main-nav&quot;&gt;&lt;span class=&quot;fa fa-home hidden-xs hidden-sm&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;hidden-md hidden-lg&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Outreach&quot; href=&quot;#&quot; id=&quot;nav-item_outreach&quot;&gt;Outreach&lt;/a&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Simple Dropdown&quot; href=&quot;#&quot; id=&quot;nav-item_outreach&quot;&gt;Simple Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Research&quot; href=&quot;#&quot; id=&quot;nav-item_research&quot;&gt;Research&lt;/a&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Super Menu&quot; href=&quot;#&quot; id=&quot;nav-item_research&quot;&gt;Super Menu &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Solutions&quot; href=&quot;#&quot; id=&quot;nav-item_solutions&quot;&gt;Solutions&lt;/a&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Tabbed Menu&quot; href=&quot;#&quot; id=&quot;nav-item_solutions&quot;&gt;Tabbed Menu&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;&lt;a title=&quot;Operations&quot; href=&quot;#&quot; id=&quot;nav-item_operations&quot;&gt;Operations&lt;/a&gt;
+                &lt;li class=&quot;menu-item menu-btn-navbar&quot;&gt;&lt;a title=&quot;Navbar Button&quot; href=&quot;#&quot; id=&quot;nav-item_button&quot; class=&quot;btn-navbar btn btn-gold&quot;&gt;Navbar Button&lt;/a&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
@@ -763,9 +803,22 @@ page:</p>
       </div>
 
       </section>
+
+<div class='article-footnote'>
+  <div class="panel panel-default">
+    <div class="panel-body">
+  Got Questions? ask them on the <a href="http://asuwebstandards.slack.com/"><i class="fa fa-slack" aria-hidden="true"></i> ASU Web Standards
+ Slack Channel</a>
+    </div>
+  </div>
+</div>
+
 </article>
 
 <!-- SCRIPTS -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script>
@@ -775,6 +828,7 @@ page:</p>
   <footer class="kss-github">
 
     <a class="no-border" href="https://github.com/gios-asu/ASU-Web-Standards-Bootstrap"><img src="public/github-fork--black.png" alt="Fork me on GitHub"></a>
+
   </footer>
 
 <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

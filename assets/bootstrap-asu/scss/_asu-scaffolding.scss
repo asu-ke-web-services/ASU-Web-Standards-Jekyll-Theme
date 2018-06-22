@@ -1,0 +1,189 @@
+// ASU Specific Scaffolding
+//
+// Will style markup that is out of our control. Most of the
+// time this markup will have to be styled with IDs since
+// classes are not provided.
+
+#masthead {
+  background-color: $color-white;
+  border: 0;
+
+
+  > .container {
+    @media (max-width: $asu-screen-sm-max) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+//=== ASU Mobile Header
+
+#asu_mobile_hdr {
+  height: auto !important;
+
+  @media (max-width: $asu-screen-sm-max) {
+    float: left;
+    padding: 0 12px;
+    width: 100%;
+  }
+}
+
+//=== ASU Mobile Menu
+
+#asu_mobile_menu {
+  @media (max-width: $asu-screen-sm-max) {
+    margin-top: 0 !important;
+  }
+}
+
+//=== ASU Logo
+
+#asu_logo {
+  padding: $asu-logo-padding 0 !important;
+
+  @media (max-width: $asu-screen-sm-max) {
+    min-width: 100px !important;
+
+    a,
+    a img {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+//=== Search and Mobile Menu Buttons
+
+#asu_mobile_search_button,
+#asu_mobile_menu_button {
+  box-sizing: initial !important;
+  color: $color-dusty-gray;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: $font-size-medium;
+  margin: 0;
+  padding: $asu-mobile-buttons-padding $space-base;
+  text-align: center;
+  width: $asu-mobile-buttons-width;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+#asu_mobile_search_button {
+  &.clicked {
+    background-color: darken($color-gallery, 1.5);
+  }
+}
+
+#asu_mobile_menu_button {
+  font-size: $font-size-mobile-menu;
+  padding: $asu-mobile-buttons-small-padding $space-base;
+
+  a {
+    display: none;
+  }
+}
+
+//=== Search Form
+.main-search {
+  /*
+   * do not use display:none;
+   * it does not react to animations
+   */
+  height: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  -moz-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+
+  -moz-transition-timing-function: cubic-bezier(0, 1, .5, 1);
+  -o-transition-timing-function: cubic-bezier(0, 1, .5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, .5, 1);
+  transition-timing-function: cubic-bezier(0, 1, .5, 1);
+
+  &.opened {
+    display: block;
+    height: auto;
+    max-height: 1000px;
+    overflow: hidden;
+
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  .asu_search_box {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: darken($color-gallery, 1.5);
+    border: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    color: #505558;
+    font-size: $font-size-medium;
+    outline: 0;
+    padding: 10px 12px;
+    position: relative;
+    width: 100%;
+    z-index: 500;
+  }
+
+  .asu_search_button {
+    display: none;
+  }
+}
+
+
+//== Site Name Desktop
+#site-name-desktop {
+  h1,
+  div {
+    letter-spacing: -.5px;
+    line-height: pem(28);
+    padding: 4px 6px 8px;
+
+    &.container {
+      padding: 0 15px;
+    }
+
+    &.site-title {
+      font-size: $site-name-title__font-size;
+      margin: 0;
+      padding: 0 13px 13px 0;
+
+      a {
+        border-bottom-color: transparent;
+        color: $color-abbey;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+
+        &:first-child {
+          color: $color-black;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

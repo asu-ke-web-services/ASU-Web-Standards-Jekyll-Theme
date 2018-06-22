@@ -1,0 +1,122 @@
+// HTML
+$html__font-size:         1rem;
+
+// BODY
+$body__background-color:  $color-white;
+$body__color:             $color-dark-mine;
+$body__font-family:       $font-family;
+$body__font-size:         $font-size-medium;
+$body__font-size--large:  $font-size-large;
+$body__font-weight:       $font-weight-light;
+$body__line-height:       $line-height-base;
+
+// H1
+$h1__font-size:           pem(48);
+$h1__font-size--small:    pem(40);
+$h1__font-size--jumbo:    pem(72);
+$h1__line-height:         1.2;
+$h1__margin-bottom:       $line-height-computed * 2;
+$h1__margin-top:          0; // Used to be ($line-height-computed * 2), but changed to 0
+
+// H2
+$h2__font-size:           pem(36);
+$h2__font-size--small:    pem(28);
+$h2__line-height:         $line-height-base;
+$h2__margin-bottom:       $space-large;
+$h2__margin-top:          24px;
+
+// H3
+$h3__font-size:           pem(24);
+$h3__font-size--small:    pem(20);
+$h3__line-height:         $line-height-base;
+$h3__margin-bottom:       10px;
+$h3__margin-top:          24px;
+
+// H4
+$h4__font-size:           pem(21);
+$h4__line-height:         $line-height-base;
+$h4__margin-bottom:       10px;
+$h4__margin-top:          24px;
+
+// H5
+$h5__font-size:           pem(16);
+$h5__line-height:         $line-height-pem;
+$h5__margin-bottom:       10px;
+$h5__margin-top:          24px;
+
+// H6
+$h6__font-size:           pem(16);
+$h6__line-height:         $line-height-pem;
+$h6__margin-bottom:       10px;
+$h6__margin-top:          24px;
+
+// LINKS
+$a-list-external__font-size:   pem(14);
+$a-list-external__line-height: 1;
+
+// BLOCKQUOTE
+$blockquote__font-size: pem(20);
+
+// PRE
+$pre__font-size: pem(15);
+
+// P
+$p__font-weight:          $font-weight-light;
+$p__line-height:          pem(24);
+$p__margin-bottom:        pem(24);
+
+// LEAD
+$lead__font-size:         pem(20);
+$lead__font-size--large:  pem(24);
+$lead__font-weight:       $font-weight-light;
+$lead__line-height:       1.4;
+$lead__margin-bottom:     24px;
+
+// #site-name-desktop
+$site-name-title__font-size: pem(24);
+
+// CALENDAR
+$calendar-month__font-size:  pem(13);
+$calendar-date__font-size:   pem(50);
+
+// FOOTER
+$footer-h2__font-size:      pem(21);
+$footer-social__font-size:  pem(38);
+$footer-little-link__font-size: pem(16);
+
+$innovation-footer__text-wrapper__font-size: pem(24);
+$innovation-footer__text-wrapper__font-size--small: pem(21);
+
+// HEROS
+$hero-title__font-size:           pem(32);
+$hero-title__font-size--small:    pem(28);
+$hero-title__font-size--smallest: pem(24);
+
+$ratio-hero-title__font-size:     pem(50);
+
+$tall-hero-title__font-size:      pem(120);
+
+// WEB STANDARDS NAVBAR
+$ws-nav-link__font-size:            pem(15);
+$ws-nav-link__font-size--small:     pem(14);
+$ws-nav-link__line-height:          1;
+
+$ws-navbar-brand__font-size--small: pem(15);
+$ws-navbar-brand__font-size--home-icon: pem(16);
+
+$ws-menu__font-size:                $font-size-menu;
+$ws-menu__font-size--small:         pem(13.5);
+
+// MEGA MENU
+$mega-menu-links__font-size:                 pem(15);
+$mega-menu-links__font-size--small:          pem(13.5);
+$mega-menu-dropdown-title__font-size:        pem(16);
+$mega-menu-dropdown-title__font-size--small: pem(13.5);
+$mega-menu-dropdown-title-icon__font-size:   pem(20);
+
+// PANELS
+$pane-h3__font-size:        pem(30);
+$pane-h3__font-size--small: pem(26);
+$pane-p__font-size:         $font-size-small;
+$pane-p__line-height:       pem(20);
+$panel-title__font-size:    pem(18);

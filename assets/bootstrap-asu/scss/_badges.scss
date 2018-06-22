@@ -1,0 +1,28 @@
+// Badges
+//
+// Badges are available just like in Bootstrap
+//
+// Markup: <span class="badge">+ 1</span>
+//
+// Styleguide badges
+
+// Badges in Nav Pills
+//
+// Badges can also be used in nav pills:
+//
+// Markup:
+// <ul class="nav nav-pills" role="tablist">
+//   <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+//   <li role="presentation"><a href="#">Profile</a></li>
+//   <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+// </ul>
+//
+// Styleguide badges.nav
+.badge {
+  font-size: $font-size-small;
+
+  a.list-group-item.active > &,
+  .nav-pills > .active > a > & {
+    color: $color-maroon;
+  }
+}

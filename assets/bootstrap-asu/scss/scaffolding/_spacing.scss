@@ -1,0 +1,128 @@
+// Spacing
+//
+// There are a variety of spacing modifiers to help you tweak the spacing
+// between your elements, while still maintaining a standardized layout
+//
+// .margin-top-0 - an alias for .space-top-0
+// .space-top-0 - 0px margin top
+// .space-top-sm - 10px margin top
+// .space-top-md - 20px margin top
+// .space-top-lg - 30px margin top
+// .space-top-xl - 40px margin top
+// .space-bot-0 - 0px margin bottom
+// .space-bot-sm - 10px margin bottom
+// .space-bot-md - 20px margin bottom
+// .space-bot-lg - 30px margin bottom
+// .space-bot-xl - 40px margin bottom
+// .mr-20 - margin right 20px
+// .pad-top-0 - 0px padding top
+// .pad-top-sm - 10px padding top
+// .pad-top-md - 20px padding top
+// .pad-top-lg - 30px padding top
+// .pad-top-xl - 40px padding top
+// .pad-bot-0 - 0px padding bottom
+// .pad-bot-sm - 10px padding bottom
+// .pad-bot-md - 20px padding bottom
+// .pad-bot-lg - 30px padding bottom
+// .pad-bot-xl - 40px padding bottom
+// .pad-zero - 0 padding all around
+// .pad-md - 20px padding all around
+//
+// Styleguide scaffolding.spacing
+
+.space-top-0,
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.space-top-sm {
+  margin-top: $space-large;
+}
+
+.space-top-md {
+  margin-top: ($space-large * 2);
+}
+
+.space-top-lg {
+  margin-top: ($space-large * 3);
+}
+
+.space-top-xl {
+  margin-top: ($space-large * 4);
+}
+
+.space-bot-0 {
+  margin-bottom: 0;
+}
+
+.space-bot-sm {
+  margin-bottom: $space-large;
+}
+
+.space-bot-md {
+  margin-bottom: ($space-large * 2);
+}
+
+.space-bot-lg {
+  margin-bottom: ($space-large * 3);
+}
+
+.space-bot-xl {
+  margin-bottom: ($space-large * 4);
+}
+
+.space-bot-form {
+  margin-bottom: 15px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.pad-top-0 {
+  padding-top: 0;
+}
+
+.pad-top-sm {
+  padding-top: 12px;
+}
+
+.pad-top-md {
+  padding-top: 24px;
+}
+
+.pad-top-lg {
+  padding-top: 36px;
+}
+
+.pad-top-xl {
+  padding-top: 48px;
+}
+
+.pad-bot-0 {
+  padding-bottom: 0;
+}
+
+.pad-bot-sm {
+  padding-bottom: 12px;
+}
+
+.pad-bot-md {
+  padding-bottom: 24px;
+}
+
+.pad-bot-lg {
+  padding-bottom: 36px;
+}
+
+.pad-bot-xl {
+  padding-bottom: 48px;
+}
+
+.pad-zero {
+  padding: 0 !important;
+}
+
+.pad-md {
+  padding: 20px;
+}

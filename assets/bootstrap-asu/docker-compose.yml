@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  ### Build Image #############################
+  test:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: asu-web-standards-bootstrap:latest
+    volumes:
+      - ./:/app/
