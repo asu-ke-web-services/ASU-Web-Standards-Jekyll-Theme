@@ -1,0 +1,18 @@
+// Basic Styles
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size:              $html__font-size;
+}
+
+body {
+  background-color: $body__background-color;
+  color:            $body__color;
+  font-family:      $body__font-family;
+  font-size:        $body__font-size;
+  font-weight:      $body__font-weight;
+  line-height:      $body__line-height;
+
+  @media (min-width: $asu-screen-lg-min) {
+    font-size: $body__font-size--large;
+  }
+}

@@ -1,0 +1,41 @@
+// Nav Tabs
+//
+// Used in conjunction with `.nav`.
+//
+// Markup:
+// <ul class="nav nav-tabs">
+//   <li role="presentation" class="active"><a href="#">Home</a></li>
+//   <li role="presentation"><a href="#">Profile</a></li>
+//   <li role="presentation"><a href="#">Messages</a></li>
+// </ul>
+//
+// Styleguide navigation.nav-tabs
+.nav-tabs > li {
+  border-top: $space-base solid transparent;
+
+  > a {
+    border: $space-xsmall solid lighten($color-silver, 4);
+    border-bottom-color: transparent;
+    border-radius: 0;
+    color: $color-silver-chalice;
+    line-height: $line-height-base;
+    margin-right: 0;
+  }
+
+  &:hover,
+  &.active {
+    border-top: $space-base solid $color-maroon;
+
+    > a {
+      border-top-color: transparent;
+    }
+  }
+
+  &.active > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $color-maroon;
+    }
+  }
+}

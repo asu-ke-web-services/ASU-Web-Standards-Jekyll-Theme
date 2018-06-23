@@ -1,0 +1,35 @@
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  min-height:    1px;
+  padding-left:  10px;
+  padding-right: 10px;
+  position:      relative;
+}
+
+.col-xs-5ths {
+  float: left;
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-5ths {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    float: left;
+    width: 20%;
+  }
+}

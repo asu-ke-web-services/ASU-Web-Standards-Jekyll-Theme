@@ -1,0 +1,23 @@
+// Base Navigation
+.nav {
+  > li > a {
+    border-bottom: 0;
+    padding: $space-large;
+  }
+
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      border-color: $color-maroon;
+    }
+  }
+
+  .nav-divider {
+    margin: $space-large 0;
+  }
+}
+
+.tab-content {
+  padding: $space-xxlarge;
+}

@@ -1,0 +1,37 @@
+// Modals
+//
+// A rendered modal with header, body, and set of actions in the footer.
+//
+// Markup:
+// <div class="static-modal">
+//   <div class="modal" tabindex='1'>
+//     <div class="modal-dialog">
+//       <div class="modal-content">
+//         <div class="modal-header">
+//           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+//           <h4 class="modal-title">Modal title</h4>
+//         </div>
+//         <div class="modal-body">
+//           <p>The body of the modal</p>
+//         </div>
+//         <div class="modal-footer">
+//           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//           <button type="button" class="btn btn-primary">Save changes</button>
+//         </div>
+//       </div><!-- /.modal-content -->
+//     </div><!-- /.modal-dialog -->
+//   </div>
+// </div>
+//
+// Styleguide modals
+.modal-content {
+  border-radius: $border-radius;
+}
+
+.modal-header {
+  min-height: 16.44px;
+}
+
+.modal-title {
+  line-height: $line-height-base;
+}

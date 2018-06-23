@@ -1,0 +1,29 @@
+// Input Groups
+.input-group-addon {
+  border: $space-xsmall solid $color-silver-chalice;
+  color: $color-emperor;
+  font-size: $font-size-medium;
+  padding: $space-base $space-xlarge;
+}
+
+.input-group-addon.input-sm,
+.form-horizontal .form-group-sm .input-group-addon.form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .input-group-addon.btn {
+  border-radius: $border-radius;
+  font-size: $font-size-small;
+  padding: $space-base $space-large;
+}
+
+.input-group-addon.input-lg,
+.form-horizontal .form-group-lg .input-group-addon.form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .input-group-addon.btn {
+  border-radius: $border-radius;
+  font-size: $font-size-large;
+  padding: $space-large $space-xxlarge;
+}
+
+.input-group-btn > .btn {
+  height: $form-control-height;
+}

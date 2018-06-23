@@ -1,0 +1,50 @@
+// ==============================
+// Sizing
+// ==============================
+
+$base-sizing-unit: 5px !default;
+
+$space-xsmall:  1px               !default;     //  1px
+$space-base:    $base-sizing-unit !default;     //  5px
+$space-large:   2 * $base-sizing-unit !default; // 10px
+$space-xlarge:  4 * $base-sizing-unit !default; // 20px
+$space-xxlarge: 5 * $base-sizing-unit !default; // 25px
+
+$border-radius: 4px !default;
+
+// ===
+// ASU
+// ===
+$asu-logo-height: 36px !default;
+$asu-logo-width:  200px !default;
+$asu-logo-padding: 12px;
+$asu-mobile-buttons-padding: 21px;
+$asu-mobile-buttons-small-padding: 18px;
+$asu-mobile-buttons-width: 35px;
+
+// ===
+// Nav
+// ===
+$nav-bar-height:              57px;
+$nav-bar-small-height:        36px;
+$nav-item-padding:            ($nav-bar-height - $line-height-computed) / 2;
+$nav-item-small-padding:      ($nav-bar-small-height - $line-height-computed-menu) / 2;
+$nav-bar-dropdown-width:      160px;
+$nav-bar-dropdown-max-height: 2000px;
+$sidebar-border-top:          8px;
+$sidebar-offset-top:          24px;
+$sidebar-medium-width:        293px;
+$sidebar-large-width:         360px;
+
+// =====
+// Forms
+// =====
+$form-control-height:       38px !default;
+$input-height-small:        33px !default;
+$input-height-large:        53px !default;
+
+// =====
+// Heros
+// =====
+$hero-ratio:                 30%;
+$hero-slim-height:           70px;

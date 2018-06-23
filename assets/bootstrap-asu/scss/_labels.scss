@@ -1,0 +1,34 @@
+// Labels
+//
+// Add any of the below mentioned modifier classes to change the appearance of a label.
+//
+// Markup:
+// <span class="label {{modifier_class}}">Label</span>
+//
+// .label-default - Default color
+// .label-primary - ASU maroon label
+// .label-success - Success label
+// .label-info - Informational label
+// .label-warning - Warning label
+// .label-danger - Danger label
+//
+// Styleguide labels
+.label-primary {
+  @include label-variant($color-maroon);
+}
+
+.label-success {
+  @include label-variant($color-green);
+}
+
+.label-info {
+  @include label-variant($color-blue);
+}
+
+.label-warning {
+  @include label-variant($color-yellow);
+}
+
+.label-danger {
+  @include label-variant($color-orange);
+}

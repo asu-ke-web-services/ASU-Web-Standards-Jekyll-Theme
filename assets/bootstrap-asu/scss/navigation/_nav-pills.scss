@@ -1,0 +1,19 @@
+// Nav Pills
+//
+// Used in conjunction with `.nav`.
+//
+// Markup:
+// <ul class="nav nav-pills">
+//   <li role="presentation" class="active"><a href="#">Home</a></li>
+//   <li role="presentation"><a href="#">Profile</a></li>
+//   <li role="presentation"><a href="#">Messages</a></li>
+// </ul>
+//
+// Styleguide navigation.nav-pills
+.nav-pills > li.active > a {
+  &,
+  &:hover,
+  &:focus {
+    background-color: $color-maroon;
+  }
+}

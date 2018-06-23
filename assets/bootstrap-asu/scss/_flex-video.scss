@@ -1,0 +1,30 @@
+// Flex Video
+// TODO need to document properly
+.flex-video {
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+  padding-bottom: 67.5%;
+  padding-top: 25px;
+  position: relative;
+
+  &.widescreen {
+    padding-bottom: 56.34%;
+  }
+
+  &.vimeo {
+    padding-top: 0;
+  }
+
+  iframe,
+  object,
+  embed,
+  video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+  }
+}

@@ -1,0 +1,259 @@
+// Buttons
+//
+// Use the button classes on `<a>`, `<button>`, or `<input>`.
+//
+// Markup:
+// <div>
+//  <a class="btn btn-default" href="#" role="button">Link</a>
+//  <button class="btn btn-default" type="submit">Button</button>
+//  <input class="btn btn-default" type="button" value="Input">
+//  <input class="btn btn-default" type="submit" value="Submit">
+// </div>
+//
+// Styleguide buttons
+.btn {
+  @include button-size(
+    $space-base,
+    $space-xlarge,
+    $font-size-medium,
+    $line-height-base,
+    $border-radius);
+
+  &,
+  &:active,
+  &.active {
+    &:focus {
+      outline: 0;
+      outline-offset: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-emperor;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+
+    background-image: none;
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include box-shadow(none);
+    @include opacity(.65);
+
+    cursor: not-allowed;
+    // Future-proof disabling of clicks
+    pointer-events: none;
+  }
+}
+
+
+// Alternative Buttons
+//
+// Use any of the available button classes to quickly create a styled button.
+//
+// Markup:
+// <button type="button" class="btn {{modifier_class}}">{{modifier_class}}</button>
+//
+// .btn-default - Default button
+// .btn-primary - ASU maroon color
+// .btn-secondary - Gray button
+// .btn-gold - Gold button
+// .btn-degree-programs - Only for use with degree programs. (Formally .btn-blue)
+// .btn-success - Success action color
+// .btn-info - Information action color
+// .btn-warning - Warning color
+// .btn-danger - Danger color
+// .btn-link - A button styled as a link
+//
+// Styleguide buttons.alternative-buttons
+.btn-default {
+  @include button-variant(
+    $color-emperor,
+    $color-wild-sand,
+    $color-silver-chalice);
+}
+
+.btn-primary {
+  @include button-variant(
+    $color-white,
+    $color-maroon,
+    $color-maroon);
+}
+
+.btn-secondary {
+  @include button-variant(
+    $color-black,
+    $color-alto,
+    $color-alto);
+}
+
+.btn-gold {
+  @include button-variant(
+    $color-dark-mine,
+    $color-gold,
+    $color-gold);
+}
+
+.btn-blue,
+.btn-degree-programs {
+  @include button-variant(
+    $color-white,
+    $color-blue,
+    $color-blue);
+}
+
+.btn-success {
+  @include button-variant(
+    $color-white,
+    $color-green,
+    $color-green-darkened);
+}
+
+.btn-info {
+  @include button-variant(
+    $color-white,
+    $color-blue,
+   $color-blue-darkened);
+}
+
+.btn-warning {
+  @include button-variant(
+    $color-black,
+    $color-yellow,
+    $color-yellow-darkened);
+}
+
+.btn-danger {
+  @include button-variant(
+    $color-white,
+    $color-orange,
+    $color-orange-darkened);
+}
+
+// Make a button look and behave like a link
+.btn-link {
+  border-radius: 0;
+  color: $color-maroon;
+  cursor: pointer;
+  font-weight: $font-weight-normal;
+
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    @include box-shadow(none);
+
+    background-color: transparent;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $color-brick-red;
+    text-decoration: underline;
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $color-boulder;
+      text-decoration: none;
+    }
+  }
+}
+
+// Button Sizes
+//
+// Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
+//
+// Markup:
+// <p>
+//   <button type="button" class="btn btn-primary {{modifier_class}}">Button Text</button>
+//   <button type="button" class="btn btn-default {{modifier_class}}">Button Text</button>
+// </p>
+//
+// .btn-lg - Large button
+// .btn-sm - Small button
+// .btn-xs - Extra small button
+//
+// Styleguide buttons.sizes
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(
+    $space-large,
+    $space-xxlarge,
+    $font-size-large,
+    $line-height-large,
+    $border-radius);
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size(
+    $space-base,
+    $space-large,
+    $font-size-small,
+    $line-height-small,
+    $border-radius);
+}
+
+.btn-xs {
+  @include button-size(
+    $space-xsmall,
+    $space-base,
+    $font-size-small,
+    $line-height-small,
+    $border-radius);
+}
+
+// Button Block
+//
+// Create block level buttons—those that span the full width of a parent— by adding `.btn-block`.
+//
+// Markup:
+// <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+//
+// Styleguide buttons.block
+.btn-block {
+  display: block;
+  font-size: $font-size-medium;
+  padding-left: $space-base;
+  padding-right: $space-base;
+  width: 100%;
+
+  @media (min-width: $asu-screen-lg-min) {
+    font-size: $font-size-large;
+  }
+
+  // Vertically space out multiple block buttons (including when footnotes for print media
+  // have been inserted between the buttons)
+  + .btn-block,
+  + .footnote + .btn-block {
+    margin-top: ($space-large + $space-base);
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

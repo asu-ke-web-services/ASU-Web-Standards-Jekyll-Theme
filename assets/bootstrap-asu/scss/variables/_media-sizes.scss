@@ -1,0 +1,10 @@
+// ===========
+// Media Sizes
+// ===========
+$asu-screen-xs-min: 480px !default;
+$asu-screen-sm-min: 768px !default;
+$asu-screen-md-min: 992px !default;
+$asu-screen-lg-min: 1200px !default;
+$asu-screen-xs-max: ($asu-screen-sm-min - 1) !default;
+$asu-screen-sm-max: ($asu-screen-md-min - 1) !default;
+$asu-screen-md-max: ($asu-screen-lg-min - 1) !default;

@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   'use strict';
 
   var customLaunchers = {
@@ -7,7 +7,7 @@ module.exports = function (grunt) {
       options: {
         windowName: 'ASU Bootstrap Tests',
         viewportSize: {
-          width : 765,
+          width: 765,
           height: 1000
         }
       }
@@ -38,12 +38,12 @@ module.exports = function (grunt) {
     // =======
     jshint: {
       options: {
-        jshintrc: 'js/.jshintrc'
+        jshintrc: 'js/.jshintrc',
+        reporterOutput: '' // Null reporterOutput creates a bug, readmore: https://github.com/jshint/jshint/issues/2922
       },
       core: {
         src: [
-          'js/*.js',
-          '!js/_vendor.js'
+          'js/*.js'
         ]
       }
     },
@@ -70,19 +70,45 @@ module.exports = function (grunt) {
         frameworks: ['qunit'],
         reporters: ['coverage'],
         preprocessors: {
-            "js/*.js": "coverage"
+          "js/*.js": "coverage"
         },
         coverageReporter: {
-            type: "lcov",
-            dir: "coverage/"
+          type: "lcov",
+          dir: "coverage/"
         },
         plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-coverage'],
         files: [
-          { src : ['bower_components/jquery/dist/jquery.min.js'], served: true },
-          { src : ['bower_components/bootstrap/dist/js/bootstrap.min.js'], served: true },
-          { src : ['test/qunit/unit/_qunit-fixture.js'], served: true },
-          { src : ['<%= concat.bootstrapAsu.src %>'], served: true },
-          { src : ['test/qunit/unit/*-test.js'] }
+          {
+            src: ['node_modules/jquery/dist/jquery.min.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
+            served: true
+          },
+          {
+            src: ['test/qunit/unit/_qunit-fixture.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/fastclick/lib/fastclick.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/smooth-scroll/dist/js/smooth-scroll.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/moment/moment.js'],
+            served: true
+          },
+          {
+            src: ['<%= concat.bootstrapAsu.src %>'],
+            served: true
+          },
+          {
+            src: ['test/qunit/unit/*-test.js']
+          }
         ],
         singleRun: true,
         browsers: ['PhantomJS_Mobile', 'PhantomJS_Desktop'],
@@ -93,11 +119,37 @@ module.exports = function (grunt) {
         frameworks: ['qunit'],
         plugins: ['karma-qunit', 'karma-phantomjs-launcher'],
         files: [
-          { src : ['bower_components/jquery/dist/jquery.min.js'], served: true },
-          { src : ['bower_components/bootstrap/dist/js/bootstrap.min.js'], served: true },
-          { src : ['test/qunit/unit/_qunit-fixture.js'], served: true },
-          { src : ['<%= concat.bootstrapAsu.src %>'], served: true },
-          { src : ['test/qunit/unit/*-test.js'] }
+          {
+            src: ['node_modules/jquery/dist/jquery.min.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
+            served: true
+          },
+          {
+            src: ['test/qunit/unit/_qunit-fixture.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/fastclick/lib/fastclick.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/smooth-scroll/dist/js/smooth-scroll.js'],
+            served: true
+          },
+          {
+            src: ['node_modules/moment/moment.js'],
+            served: true
+          },
+          {
+            src: ['<%= concat.bootstrapAsu.src %>'],
+            served: true
+          },
+          {
+            src: ['test/qunit/unit/*-test.js']
+          }
         ],
         singleRun: true,
         browsers: ['PhantomJS_Mobile', 'PhantomJS_Desktop'],
@@ -110,9 +162,9 @@ module.exports = function (grunt) {
       options: {
         inject: 'test/qunit/phantom.js',
         // size the viewport for mobile
-        page : {
-          viewportSize : {
-            width : 766
+        page: {
+          viewportSize: {
+            width: 766
           }
         }
       },
@@ -129,7 +181,7 @@ module.exports = function (grunt) {
         'scss/theme/*.scss',
         'scss/navigation/*.scss',
         'scss/variables/*.scss',
-        // Not font_awesome
+      // Not font_awesome
       ],
       options: {
         config: 'scss/.scss-lint.yml'
@@ -144,12 +196,12 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'build/css/bootstrap-asu.css' : 'scss/bootstrap-asu.scss'
-       }
+          'build/css/bootstrap-asu.css': 'scss/bootstrap-asu.scss'
+        }
       },
       fortesting: {
         files: {
-          'test/vendor/css/bootstrap-asu.css' : 'scss/bootstrap-asu.scss',
+          'test/vendor/css/bootstrap-asu.css': 'scss/bootstrap-asu.scss',
         }
       }
     },
@@ -159,22 +211,25 @@ module.exports = function (grunt) {
       bootstrapAsu: {
         src: [
           'js/_license.js',
-          'js/_vendor.js',
-          'js/_modernizr.js',
-          'js/_iframe-overlay.js',
+          'node_modules/fastclick/lib/fastclick.js',
+          'js/_fastclick.js',
+          'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
           'js/_smoothscroll.js',
-          'js/_smartresize.js',
+          'node_modules/moment/moment.js',
           'js/_calendar.js',
+          'js/_iframe-overlay.js',
+          'js/_smartresize.js',
           'js/_sidebar.js',
           'js/_collapse-footer.js',
           'js/_wait-for.js',
           'js/_mobile-menu.js',
           'js/_sticky-nav.js',
-          'js/_navs-click-and-hover.js'
+          'js/_navs-click-and-hover.js',
+          'js/_print-footnote-links.js'
         ],
         dest: 'build/js/bootstrap-asu.js'
       },
-      kss : {
+      kss: {
         src: [
           'test/vendor/css/bootstrap.min.css',
           'test/vendor/css/bootstrap-asu.css',
@@ -186,7 +241,7 @@ module.exports = function (grunt) {
     // =========
     uglify: {
       options: {
-        preserveComments: 'some',
+        preserveComments: /^!/, // this replaces the old, non-working 'some' option
         sourceMap: true
       },
       core: {
@@ -211,7 +266,7 @@ module.exports = function (grunt) {
     // ============
     browserSync: {
       bsFiles: {
-        src : [
+        src: [
           '<%= watch.core.files %>',
           './test/vendor/css/*.css'
         ]
@@ -237,37 +292,36 @@ module.exports = function (grunt) {
     },
     // KSS
     // ===
-    kss : {
+    kss: {
       options: {
         css: [
           'all.css'
         ],
-        template: 'template'
+        template: 'kss-template'
       },
       dist: {
         files: {
-          'build/docs' : ['scss']
+          'build/docs': ['scss']
         }
       }
     },
-    // Grunt Bower
-    // ===========
-    bower: {
-      dev: {
-        dest: './build/',
-        options: {
-          keepExpandedHierarchy: false,
-          packageSpecific: {
-            'font-awesome': {
-              fonts_dest: './build/fonts',
-              files: [
-                'fonts/*'
-              ]
-            }
-          },
-          ignorePackages: ['jquery', 'bootstrap']
+    copy: {
+      main: {
+        files: [
+          // Font awesome fonts
+          {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'build/fonts/', filter: 'isFile'}
+        ],
+      },
+    },
+    bootlint: {
+      options: {
+        stoponerror: false,
+        relaxerror: {
+          'E002': [], // Found one or more uses of outdated Bootstrap v2 `.spanN` grid classes
+          'E043': [] // This won't be an issue in Bootstrap v4, so just ignore for now
         }
-      }
+      },
+      files: './build/docs/*.html'
     }
   });
 
@@ -281,11 +335,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-kss');
-  grunt.loadNpmTasks('grunt-bower');
+  grunt.loadNpmTasks('grunt-bootlint');
 
   grunt.registerTask('validate', [
     'jshint',
@@ -304,25 +359,33 @@ module.exports = function (grunt) {
     'concat',
     'uglify',
     'cssmin',
-    'bower',
+    'copy',
   ]);
 
-  // Documentation
+  // just for building the docs quickly
+  grunt.registerTask('build-docs', [
+    'sass:fortesting',
+    'concat:kss',
+    'kss',
+  ]);
+
+  // building and validating the docs
   grunt.registerTask('docs', [
     'validate',
     'sass:fortesting',
     'concat:kss',
-    'kss'
+    'kss',
+    'bootlint',
   ]);
 
   // Serve
   grunt.registerTask('serve', [
     'browserSync',
-    'watch:core'
+    'watch:core',
   ]);
 
   // Just Test
-  grunt.registerTask('test',  [
+  grunt.registerTask('test', [
     'validate',
     'test-base',
     'karma:coverageMobile',

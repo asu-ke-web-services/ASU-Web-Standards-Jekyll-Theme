@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap ASU Addon Plugin Test Suite</title>
+
+    <!-- QUnit -->
+    <script src="http://code.jquery.com/qunit/qunit-1.15.0.js"></script>
+    <!-- Blanket (Code Coverage) -->
+    <script src="../vendor/js/blanket.min.js"></script>
+    <!-- jQuery -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <!-- QUnit -->
+    <style>
+      #qunit-tests > li.pass {
+        display: none;/* Make it easier to see failing tests is Sauce screencasts */
+      }
+    </style>
+    <script>
+      // See https://github.com/axemclion/grunt-saucelabs#test-result-details-with-qunit
+      var log = []
+      QUnit.done(function (testResults) {
+        var tests = []
+        for (var i = 0, len = log.length; i < len; i++) {
+          var details = log[i]
+          tests.push({
+            name: details.name,
+            result: details.result,
+            expected: details.expected,
+            actual: details.actual,
+            source: details.source
+          })
+        }
+        testResults.tests = tests
+
+        window.global_test_results = testResults
+      })
+
+      QUnit.testStart(function (testDetails) {
+        QUnit.log = function (details) {
+          if (!details.result) {
+            details.name = testDetails.name
+            log.push(details)
+          }
+        }
+      })
+
+      // Cleanup
+      QUnit.testDone(function () {
+        $('#qunit-fixture').empty()
+        $('#modal-test, .modal-backdrop').remove()
+      })
+    </script>
+
+    <!-- Plugin sources -->
+    <script>$.support.transition = false</script>
+    <script src="../../js/_vendor.js" data-cover></script>
+    <script src="../../js/_modernizr.js" data-cover></script>
+    <script src="../../js/_smoothscroll.js" data-cover></script>
+    <script src="../../js/_smartresize.js" data-cover></script>
+    <script src="../../js/_calendar.js" data-cover></script>
+    <script src="../../js/_sidebar.js" data-cover></script>
+    <script src="../../js/_collapse-footer.js" data-cover></script>
+    <script src="../../js/_wait-for.js"></script>
+    <script src="../../js/_mobile-menu.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="qunit-container">
+            <div id="qunit"></div>
+            <div id="qunit-fixture"></div>
+          </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="col-md-6 col-md-push-1">
+          <div id="sidebarNav" class="sidebar-nav">
+            <h4>Navigate this Doc</h4>
+            <!-- List Group, linked items -->
+            <div class="list-group">
+              <a class="list-group-item" data-scroll href="#headings">Headings</a>
+              <a class="list-group-item" data-scroll href="#content-formatting">Content Formatting</a>
+              <a class="list-group-item" data-scroll href="#calendar-dates">Desktop Calendar Dates</a>
+              <a class="list-group-item" data-scroll href="#buttons">Buttons</a>
+              <a class="list-group-item" data-scroll href="#profile">Profile</a>
+              <a class="list-group-item" data-scroll href="#campus-visits">Campus Visits</a>
+              <a class="list-group-item" data-scroll href="#tables">Tables</a>
+              <a class="list-group-item" data-scroll href="#forms">Forms</a>
+              <a class="list-group-item" data-scroll href="#input-groups">Input Groups</a>
+              <a class="list-group-item" data-scroll href="#panels-list-groups">Panels &amp; List Groups</a>
+              <a class="list-group-item" data-scroll href="#images">Images</a>
+              <a class="list-group-item" data-scroll href="#carousel">Carousel</a>
+              <a class="list-group-item" data-scroll href="#labels-badges">Labels &amp; Badges</a>
+              <a class="list-group-item" data-scroll href="#alerts">Alerts</a>
+              <a class="list-group-item" data-scroll href="#resp-video">Responsive Video</a>
+            </div>
+          </div>
+        </div>
+        <!-- End Sidebar -->
+      </div>
+    </div>
+
+  </body>
+</html>

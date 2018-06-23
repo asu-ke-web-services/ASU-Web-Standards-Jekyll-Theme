@@ -11,19 +11,20 @@
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-561868-49', 'auto');
     ga('send', 'pageview');
 
   </script>
-
   <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="all.css">
 
 </head>
@@ -208,6 +209,10 @@
       </h1>
 
 
+      <div class="kss-description">
+        <p>Use code like the following to render a pagination navigator component.</p>
+
+      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
@@ -215,54 +220,101 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <nav>
+          <nav aria-label="Pagination">
   <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
+    <li><a href="#/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+    <li><a href="#/">1</a></li>
+    <li><a href="#/">2</a></li>
+    <li><a href="#/">3</a></li>
+    <li class="disabled"><a href="#/"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>
+    <li class="pagination-dropdown active">
+      <a href="#/" onclick="return false;" class="pagination-dropdown__link">
+        <select id="pagination-selector" class="pagination-dropdown__select pagination-dropdown__select--active">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected="selected">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
       </a>
     </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
+    <!-- The following script needs to be passed the base url to use
+      in the redirection. -->
+    <script>
+      /*
+      document.getElementById ( 'pagination-selector' ).onchange = function ( e ) {
+        window.location.href = '$base_url' + e.target.value;
+      };
+      */
+    </script>
+    <li class="disabled"><a href="#/"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>
+    <li><a href="#/">5</a></li>
+    <li><a href="#/">6</a></li>
+    <li><a href="#/">7</a></li>
+    <li><a href=""><i class="fa fa-arrow-right"></i></a></li>
   </ul>
 </nav>
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav aria-label=&quot;Pagination&quot;&gt;
   &lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;&lt;i class=&quot;fa fa-arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#/&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pagination-dropdown active&quot;&gt;
+      &lt;a href=&quot;#/&quot; onclick=&quot;return false;&quot; class=&quot;pagination-dropdown__link&quot;&gt;
+        &lt;select id=&quot;pagination-selector&quot; class=&quot;pagination-dropdown__select pagination-dropdown__select--active&quot;&gt;
+          &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+          &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+          &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+          &lt;option value=&quot;4&quot; selected=&quot;selected&quot;&gt;4&lt;/option&gt;
+          &lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+          &lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;
+          &lt;option value=&quot;7&quot;&gt;7&lt;/option&gt;
+        &lt;/select&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
+    &lt;!-- The following script needs to be passed the base url to use
+      in the redirection. --&gt;
+    &lt;script&gt;
+      /*
+      document.getElementById ( &#x27;pagination-selector&#x27; ).onchange = function ( e ) {
+        window.location.href = &#x27;$base_url&#x27; + e.target.value;
+      };
+      */
+    &lt;/script&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#/&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#/&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-arrow-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
       </div>
 
       </div>
+
+<div class='article-footnote'>
+  <div class="panel panel-default">
+    <div class="panel-body">
+  Got Questions? ask them on the <a href="http://asuwebstandards.slack.com/"><i class="fa fa-slack" aria-hidden="true"></i> ASU Web Standards
+ Slack Channel</a>
+    </div>
+  </div>
+</div>
+
 </article>
 
 <!-- SCRIPTS -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+
 <script src="public/kss.js"></script>
 <script src="public/prettify.js"></script>
 <script>
@@ -272,6 +324,7 @@
   <footer class="kss-github">
 
     <a class="no-border" href="https://github.com/gios-asu/ASU-Web-Standards-Bootstrap"><img src="public/github-fork--black.png" alt="Fork me on GitHub"></a>
+
   </footer>
 
 <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

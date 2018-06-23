@@ -1,0 +1,117 @@
+// List groups
+//
+// List groups are a flexible and powerful component for displaying not only simple
+// lists of elements, but complex ones with custom content.
+//
+// Markup:
+// <ul class="list-group">
+//   <li class="list-group-item">Cras justo odio</li>
+//   <li class="list-group-item">Dapibus ac facilisis in</li>
+//   <li class="list-group-item">Morbi leo risus</li>
+//   <li class="list-group-item">Porta ac consectetur ac</li>
+//   <li class="list-group-item">Vestibulum at eros</li>
+// </ul>
+//
+// Styleguide list-groups
+
+.list-group-item {
+  border: 0;
+  border-top: 1px solid $color-alto;
+  font-weight: $font-weight-light;
+  /* Override the margin-bottom: -1px; that bootstrap provides */
+  margin-bottom: 0;
+  padding: 10px 5px;
+
+  &:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &.active {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $color-white;
+      border-color: $color-alto;
+
+      .list-group-item-text {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+a.list-group-item {
+  border-bottom: 0;
+  color: $color-maroon;
+  font-weight: $font-weight-light;
+
+  &:hover {
+    background-color: $color-wild-sand;
+    color: $color-maroon;
+    font-weight: $font-weight-bold;
+  }
+
+  &.active {
+    background-color: $color-white;
+    color: $color-maroon;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      background-color: $color-wild-sand;
+      color: $color-maroon;
+    }
+  }
+
+  .list-group-item-heading {
+    color: $color-maroon;
+  }
+}
+
+@include list-group-item-variant(success,
+  $color-green,
+  $color-white);
+@include list-group-item-variant(info,
+  $color-blue,
+  $color-white);
+@include list-group-item-variant(warning,
+  $color-yellow,
+  $color-black);
+@include list-group-item-variant(danger,
+  $color-orange,
+  $color-white);
+
+
+.inline-link-list {
+  list-style: none;
+  padding-left: 0;
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  li {
+    float: left;
+
+    &::after {
+      content: '|';
+      font-weight: $font-weight-light;
+      margin: 0 5px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}

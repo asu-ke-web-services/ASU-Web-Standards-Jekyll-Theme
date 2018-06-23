@@ -1,0 +1,18 @@
+// Background variants
+//
+// Style the background of an element.
+//
+// Markup: <p class="{{modifier_class}}">{{modifier_class}}</p>
+//
+// .bg-primary - Maroon background
+// .bg-success - Green background
+// .bg-info - Blue background
+// .bg-warning - Yellow background
+// .bg-danger - Orange background
+//
+// Styleguide scaffolding.backgrounds
+@include bg-variant('.bg-primary', $color-maroon);
+@include bg-variant('.bg-success', $color-green);
+@include bg-variant('.bg-info', $color-blue);
+@include bg-variant('.bg-warning', $color-yellow);
+@include bg-variant('.bg-danger', $color-orange);

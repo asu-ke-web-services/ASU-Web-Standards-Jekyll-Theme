@@ -1,0 +1,76 @@
+// Links
+//
+// Use the `<a>` tag to link to pages, anchors, or external pages.
+//
+// Make your link text descriptive.
+//
+// Markup: <p><a class="{{modifier_class}}" href="#">I am a link</a></p>
+//
+// .no-border   - A link without a border
+// .no-decorate - A link without color or a border
+//
+// Styleguide scaffolding.links
+a {
+  border-bottom: 1px dotted $color-maroon;
+  color:         $color-maroon;
+  font-weight:   $font-weight-normal;
+
+  &:hover,
+  &:focus {
+    border-bottom:   1px dotted $color-brick-red;
+    color:           $color-brick-red;
+    text-decoration: none;
+  }
+
+  &.no-border {
+    border-bottom: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 0;
+    }
+  }
+
+  &.no-decorate {
+    border: 0;
+    color: inherit;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 0;
+      color: inherit;
+    }
+  }
+
+  // External Links
+  //
+  // These are used by the navigation. If a link is in a list, you can add
+  // `.external-link` to the `<li>` and the link will have an external icon
+  // on it.
+  //
+  // <ul class="list-group" style="width: 300px;">
+  //   <li class="list-group-item external-link"><a href="#">I am a link</a>
+  // </ul>
+  //
+  // Styleguide scaffolding.links.external
+  li.external-link &:before {
+    color:        inherit;
+    content:      '\f08e';
+    display:      inline-block;
+    float:        right;
+    font-size:    $a-list-external__font-size;
+    font-style:   normal;
+    font-variant: normal;
+    font-weight:  $font-weight-normal;
+    line-height:  $a-list-external__line-height;
+    font-family:  FontAwesome;
+    font-size:    inherit;
+    width:        10px;
+
+    .navbar & {
+      margin-top: 4px;
+    }
+  }
+}

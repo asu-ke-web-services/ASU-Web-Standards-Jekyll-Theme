@@ -1,0 +1,43 @@
+// Related Articles
+//
+// Related articles and links should be displayed at the bottom
+// of the page they are on before the footer.
+//
+// Markup:
+// <div class="related-articles">
+//   <div class="container">
+//     <div class="row">
+//       <div class="col-xs-12">
+//         <div class="space-top-md"></div>
+//         <ul class="nav nav-pills">
+//           <li class="related-post">
+//   <a href="http://google.com">Google</a>
+// </li><li class="related-post">
+//   <a href="http://bing.com">Bing</a>
+// </li>
+//         </ul>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide related-articles
+.related-articles {
+  background-color: $color-alabaster;
+  border-top: $space-xsmall solid darken($color-mine-shaft, 8);
+  margin-top: $space-large;
+  padding-bottom: $space-xxlarge;
+  padding-top: 0;
+
+  li {
+    margin-right: $space-large;
+
+    a {
+      background-color: $color-white;
+      border: $space-xsmall solid $color-silver;
+      border-radius: $border-radius;
+      display: inline-block;
+      padding: $space-base $space-large;
+    }
+  }
+}

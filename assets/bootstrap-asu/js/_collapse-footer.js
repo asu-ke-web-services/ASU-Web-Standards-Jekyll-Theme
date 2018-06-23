@@ -12,6 +12,8 @@
     } else {
       // Remove collapse open class
       $('.big-foot-nav').removeClass('in')
+      // Adding collapsed class to accomodate caret symbol changes upon window resizing
+      $('.big-foot h2[data-toggle="collapse"]').addClass('collapsed')
     }
   }
 
@@ -19,10 +21,8 @@
     if ( $(window).innerWidth() >= mobileWidth ) {
       // Don't collapse!
       e.preventDefault();
-
       var id = $(this).attr('data-target');
       $(id).addClass('in');
-
       return false;
     }
   });

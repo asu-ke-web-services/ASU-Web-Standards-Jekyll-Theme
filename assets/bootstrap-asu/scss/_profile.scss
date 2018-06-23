@@ -1,0 +1,32 @@
+// Profile
+//
+// TODO document
+//
+// Styleguide profile
+.profile {
+  border: $space-xsmall solid $color-alto;
+  margin-bottom: $line-height-computed;
+
+  .profile-heading {
+    padding: (2 * $space-xlarge) (2 * $space-xlarge) 14px;
+  }
+
+  .profile-pic {
+    max-width: 200px;
+  }
+
+  .profile-actions {
+    font-size: $font-size-small;
+    line-height: $line-height-pem;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .tab-content {
+    padding: (2 * $space-xlarge) (2 * $space-xlarge) $font-size-small;
+  }
+
+  .nav-tabs {
+    padding-left: (2 * $space-xlarge);
+  }
+}

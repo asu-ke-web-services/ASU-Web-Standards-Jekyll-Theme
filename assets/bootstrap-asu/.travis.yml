@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "8"
+
+addons:
+  artifacts:
+    s3_region:
+      - us-west-2
+    paths:
+      - test/wraith/shots
+      - test/wraith/shots_base
+
+before_install:
+  - yarn global add grunt-cli
+  - yarn global add casperjs
+
+install:
+  - bundle install
+  - yarn install
+
+script:
+  - grunt
+  # - cd test/wraith
+  # - wraith latest configs/history.yaml
+
+sudo: false
+
+cache:
+  bundler: true
+  directories:
+    - node_modules

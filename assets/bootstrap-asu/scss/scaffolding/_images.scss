@@ -1,0 +1,39 @@
+// Images
+//
+// .img-bordered - Add a 1 pixel border to an image
+// .img-border - An alias of `.img-bordered`
+// .img-center - Center an image
+// .img-100 - Force an image to 100% width
+//
+// Styleguide scaffolding.images
+.img-bordered,
+.img-border {
+  border:  1px solid $color-mercury;
+  padding: 4px;
+}
+
+.img-rounded {
+  border-radius: $border-radius;
+}
+
+.img-thumbnail {
+  line-height: $line-height-base;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+.img-100 {
+  width: 100%;
+}
+
+.column-feature-height-225 img {
+  min-height: 225px;
+}
+
+.person-image-thumb {
+   @media screen and ( max-width: $asu-screen-xs-max ) {
+     max-width: 165px;
+   }
+ }

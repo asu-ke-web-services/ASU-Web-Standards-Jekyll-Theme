@@ -1,71 +1,76 @@
-      <div id="asu_header">
-        <header class="" id="masthead">
-  <div class="container">
-    <div class="region region-header">
-      <div id="block-asu-brand-asu-brand-header" class="block block-asu-brand">
-        <div class="content"><div id="main-search" class="main-search" style="display: block;">  <form target="_top" action="https://search.asu.edu/search" method="get" name="gs">    <input class="asu_search_box" name="q" id="asu_search_box" placeholder="Search" autocomplete="off" type="text">    <input class="asu_search_button" type="submit" value="Search">    <input name="site" value="default_collection" type="hidden">    <input name="sort" value="date:D:L:d1" type="hidden">    <input name="output" value="xml_no_dtd" type="hidden">    <input name="ie" value="UTF-8" type="hidden">    <input name="oe" value="UTF-8" type="hidden">    <input name="client" value="asu_frontend" type="hidden">    <input name="proxystylesheet" value="asu_frontend" type="hidden">  </form></div>
-          <!-- START /asuthemes/4.0-rsp-up.0/headers/default_white.shtml -->
-          <div id="asu_hdr" class=" asu_hdr_white chrome chrome">
-            <div id="asu_mobile_menu" class="toggle_off">
-              <div id="asu_nav_wrapper">
-                <h2 class="hidden">Sign In / Sign Out</h2>
-                <ul id="asu_login_module"><li>SIGN IN</li><li class="end" id="asu_hdr_sso"><a target="_top" href="https://webapp4.asu.edu/myasu/Signout">SIGN OUT</a></li></ul>
-                <div id="asu_nav_menu">
-                  <h2 class="hidden">Menu</h2>
-                  <div id="asu_universal_nav">
-                    {%include universal_nav.html%}
-                    <img class="asu_touch" src="//www.asu.edu/asuthemes/4.0-rsp-up.0/images/ipad_close.gif" alt="close icon">
+<div id="asu_header">
+  <header class="" id="masthead">
+    <div class="container">
+      <div class="region region-header">
+        <div id="block-asu-brand-asu-brand-header" class="block block-asu-brand">
+          <div class="content">
+            <!-- START /asuthemes/4.0-rsp-up.0/headers/default_white.shtml -->
+            <div id="asu_hdr" class=" asu_hdr_white chrome">
+              <div id="asu_mobile_menu" class="toggle_off">
+                <div id="asu_nav_wrapper">
+                  <h2 class="hidden">Sign In / Sign Out</h2>
+                  <ul id="asu_login_module">
+                    <li id="asu_hdr_ssi" class="end">
+                      <a target="_top" href="https://weblogin.asu.edu/cgi-bin/login" onmouseover="this.href = ASUHeader.alterLoginHref(this.href);" onfocus="this.href = ASUHeader.alterLoginHref(this.href);" onclick="this.href = ASUHeader.alterLoginHref(this.href);">Sign In</a>
+                    </li>
+                  </ul>
+                  <div id="asu_nav_menu">
+                    <h2 class="hidden">Menu</h2>
+                    <div id="asu_universal_nav">
+                      {%include universal_nav.html%}
+                      <img class="asu_touch" src="//www.asu.edu/asuthemes/4.0-rsp-up.0/images/ipad_close.gif" alt="">
+                    </div>
+                    <!-- /#asu_universal_nav -->
                   </div>
-                  <!-- /#asu_universal_nav -->
+                  <!-- /#asu_nav_menu -->
                 </div>
-                <!-- /#asu_nav_menu -->
-              </div>
-              <!-- /#asu_nav_wrapper -->
-              <div id="asu_search">
-                <h2 class="hidden">Search</h2>
-                <div id="asu_search_module">
-                  <form target="_top" action="https://search.asu.edu/search" method="get" name="gs">
-                    <label class="hidden" for="asu_search_box">Search</label>
-                    <input name="site" value="default_collection" type="hidden">
-                    <input type="text" name="q" size="32" placeholder="Search ASU" id="module_asu_search_box" class="asu_search_box" onfocus="ASUHeader.searchFocus(this)" onblur="ASUHeader.searchBlur(this)">
-                    <input type="submit" value="Search" title="Search" class="asu_search_button">
-                    <input name="sort" value="date:D:L:d1" type="hidden">
-                    <input name="output" value="xml_no_dtd" type="hidden">
-                    <input name="ie" value="UTF-8" type="hidden">
-                    <input name="oe" value="UTF-8" type="hidden">
-                    <input name="client" value="asu_frontend" type="hidden">
-                    <input name="proxystylesheet" value="asu_frontend" type="hidden">
-                  </form>
+                <!-- /#asu_nav_wrapper -->
+                <div id="asu_search">
+                  <h2 class="hidden">Search</h2>
+                  <div id="asu_search_module">
+                    <form target="_top" action="https://search.asu.edu/search" method="get" name="gs">
+                      <label class="hidden" for="asu_search_box">Search</label>
+                      <input name="site" value="default_collection" type="hidden">
+                      <input type="text" name="q" size="32" placeholder="Search" id="asu_search_box" class="asu_search_box">
+                      <input type="submit" value="Search" title="Search" class="asu_search_button">
+                      <input name="sort" value="date:D:L:d1" type="hidden">
+                      <input name="output" value="xml_no_dtd" type="hidden">
+                      <input name="ie" value="UTF-8" type="hidden">
+                      <input name="oe" value="UTF-8" type="hidden">
+                      <input name="client" value="asu_frontend" type="hidden">
+                      <input name="proxystylesheet" value="asu_frontend" type="hidden">
+                    </form>
+                  </div>
+                  <!-- /#asu_search_module -->
                 </div>
-                <!-- /#asu_search_module -->
+                <!-- /#asu_search -->
               </div>
-              <!-- /#asu_search -->
+              <!-- /#asu_mobile_menu -->
+              <div id="asu_mobile_hdr">
+                <div id="asu_logo">
+                    <a target="_top" href="http://www.asu.edu/" title="Arizona State University" id="asu-logo-in-header">
+                      <img alt="Arizona State University" title="Arizona State University" src="//www.asu.edu/asuthemes/4.6/assets/full_logo.png"  height="36" width="200">
+                    </a>
+                </div>
+                <!-- /#asu_logo  -->
+                <img src="//www.asu.edu/asuthemes/4.6/assets/full_logo.png" height="32" id="asu_print_logo" alt="ASU Logo" />
+                <div id="asu_mobile_button" class="asushow"><a href="javascript:toggleASU();" data-target=".navbar-collapse" data-toggle="collapse">Menu</a></div>
+              </div>
+              <!-- /#asu_mobile_header  -->
             </div>
-            <!-- /#asu_mobile_menu -->
-            <div id="asu_mobile_hdr">
-              <div id="asu_logo">
-                                <a target="_top" href="http://www.asu.edu/" title="Arizona State University" id="asu-logo-in-header">
-                  <img src="{{site.base_path}}/assets/images/asu_logo.svg" alt="Arizona State University" height="32" width="203" style="margin-top:14px" title="Arizona State University">
-                </a>
-                              </div>
-              <!-- /#asu_logo  -->
-              <img src="{{site.base_path}}/assets/images/asu_logo.svg" height="32" width="203" id="asu_print_logo" alt="ASU Logo">
-              <div id="asu_mobile_button" class="asushow"><a href="javascript:toggleASU();" data-target=".navbar-collapse" data-toggle="collapse">Menu</a></div>
-            <div class="fa fa-navicon" id="asu_mobile_menu_button" style="display: block;">  <a href="#">Menu</a></div><div class="fa fa-search" id="asu_mobile_search_button" style="display: block;"></div></div>
-            <!-- /#asu_mobile_header  -->
+            <!-- /#asu_hdr -->
+            <div style="clear:both;"></div>
+            <!-- END /asuthemes/4.0-rsp-up.0/headers/default_white.shtml -->
           </div>
-          <!-- /#asu_hdr -->
-          <div style="clear:both;"></div>
-          <!-- END /asuthemes/4.0-rsp-up.0/headers/default_white.shtml -->
         </div>
       </div>
     </div>
+  </header>
+  <div id="site-name-desktop" class="section site-name-desktop">
+    <div class="container">
+      <h1 class="site-title" id="asu_school_name" style="">
+                      <a href="{{site.base_path}}/" id="blog-name-site-title">{{ site.organization_name}}</a>
+      </h1>
+    </div>
   </div>
-</header>        <div id="site-name-desktop" class="section site-name-desktop">
-          <div class="container">
-            <h1 class="site-title" id="asu_school_name" style="">
-                            <a href="{{site.base_path}}/" id="blog-name-site-title">{{ site.organization_name}}</a>
-            </h1>
-          </div>
-        </div>
-      </div>
+</div>

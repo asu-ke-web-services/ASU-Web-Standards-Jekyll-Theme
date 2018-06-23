@@ -1,0 +1,69 @@
+// Animations
+//
+// Provide perspective, transition, and translation css
+
+// Animation Scaffolding
+a,
+button {
+  @include transition(all .25s ease-in-out);
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+.fade {
+  @include transition(opacity .15s linear);
+  opacity: 0;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+.collapse {
+  display: none;
+
+  &.in {
+    display: block;
+    max-height: none !important;
+  }
+}
+
+.collapsing {
+  @include transition(height .35s ease);
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+// Disable Transitions
+.notransition {
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+// Navigation scaffolding
+.navbar-ws {
+  .dropdown-menu {
+    @include perspective(100);
+    @include transition(all .25s ease-out);
+  }
+
+  .open > .dropdown-menu {
+    @include translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+

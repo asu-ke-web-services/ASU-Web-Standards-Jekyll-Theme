@@ -1,0 +1,180 @@
+// Navbars
+//
+// Just like in Bootstrap, but styled differently.
+//
+// Note that `.navbar-brand` is hidden on large screens.
+//
+// Markup:
+// <nav class="navbar navbar-default">
+//   <div class="container-fluid">
+//     <ul class="nav navbar-nav navbar-right">
+//       <li><a href="#">Link</a></li>
+//       <li class="dropdown">
+//         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+//         <ul class="dropdown-menu">
+//           <li><a href="#">Action</a></li>
+//           <li><a href="#">Another action</a></li>
+//           <li><a href="#">Something else here</a></li>
+//           <li role="separator" class="divider"></li>
+//           <li><a href="#">Separated link</a></li>
+//         </ul>
+//       </li>
+//     </ul>
+//   </div>
+// </nav>
+//
+// Styleguide navigation.navbar
+.navbar {
+  border-color: transparent;
+  height: $nav-bar-height;
+  margin-bottom: 0;
+
+  > .container {
+    .navbar-brand {
+      letter-spacing: -.5px;
+
+      @media (min-width: $asu-screen-sm-min) {
+        margin-left: 0;
+      }
+
+      @media (min-width: $asu-screen-md-min) {
+        // This is the width of bootstrap's offset
+        margin-left: -15px;
+      }
+    }
+  }
+
+  @media (max-width: $asu-screen-sm-max) {
+    height: auto;
+    min-height: $nav-bar-small-height; // Override Bootstrap minheight
+  }
+}
+
+.container,
+.container-fluid {
+  > {
+    .navbar-header,
+    .navbar-collapse {
+      margin-left: 0;
+      margin-right: 0;
+
+      &.collapse {
+        // Order here matters! 768 then 991
+        @media (min-width: $asu-screen-sm-min) {
+          display: none !important;
+
+          &.in {
+            display: block !important;
+          }
+        }
+
+        @media (min-width: $asu-screen-md-min) {
+          display: block !important;
+        }
+      }
+
+      @media (min-width: $asu-screen-md-min) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .navbar-header {
+      @media (min-width: $asu-screen-sm-min) {
+        float: none;
+      }
+
+      @media (min-width: $asu-screen-md-min) {
+        display: none;
+        float: left;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  border-bottom: 0;
+  font-size: $font-size-large;
+  padding: $nav-item-small-padding ($space-large + $space-base);
+
+  &:focus,
+  &:hover {
+    border-bottom: 0;
+  }
+
+  @media (min-width: $asu-screen-md-min) {
+    display: none;
+  }
+
+  @media (max-width: $asu-screen-sm-max) {
+    font-size: $font-size-menu;
+    line-height: $line-height-menu;
+  }
+}
+
+.navbar-nav {
+  margin: 1px -15px;
+
+  @media (min-width: $asu-screen-sm-min) {
+    float: none;
+  }
+
+  @media (min-width: $asu-screen-md-min) {
+    float: left;
+    margin: 0;
+  }
+
+  > li {
+    @media (min-width: $asu-screen-sm-min) {
+      float: none;
+    }
+
+    @media (min-width: $asu-screen-md-min) {
+      float: left;
+    }
+
+    > a {
+      line-height: $line-height-pem;
+
+      @media (min-width: $asu-screen-sm-min) {
+        padding-bottom: $nav-item-padding;
+        padding-top: $nav-item-padding;
+      }
+    }
+  }
+
+  .open .dropdown-menu {
+    @media (max-width: $asu-screen-sm-max) {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      float: none;
+      margin-top: 0;
+      position: static;
+      width: auto;
+    }
+
+    > li > a,
+    .dropdown-header {
+      @media (max-width: $asu-screen-sm-max) {
+        white-space: normal;
+      }
+    }
+
+    > li > a {
+      @media (max-width: $asu-screen-sm-min) {
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+.navbar-form {
+  margin-bottom: $space-base;
+  margin-top: $space-base;
+}
+
+.navbar-text {
+  margin-bottom: $nav-item-padding;
+  margin-top: $nav-item-padding;
+}

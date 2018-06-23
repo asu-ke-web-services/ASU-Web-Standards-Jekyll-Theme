@@ -1,0 +1,41 @@
+// Alerts
+//
+// Markup: <div class="alert {{modifier_class}}">Alert!</div>
+//
+// .alert-success - Green, successful alert variant. Let the user know all is good!
+// .alert-info    - Blue, info alert variant. Let the user know some info.
+// .alert-warning - Orange, warning alert variant. Let the user know something is up!
+// .alert-danger  - Red, danger alert variant. Let the user know something bad happened!
+//
+// Styleguide alerts.
+.alert {
+  margin-bottom: $space-xxlarge;
+}
+
+.alert-success {
+  @include alert-variant(
+    $color-green,
+    $color-green-darkened,
+    $color-white);
+}
+
+.alert-info {
+  @include alert-variant(
+    $color-blue,
+    $color-blue-darkened,
+    $color-white);
+}
+
+.alert-warning {
+  @include alert-variant(
+    $color-yellow,
+    $color-yellow-darkened,
+    $color-black);
+}
+
+.alert-danger {
+  @include alert-variant(
+    $color-orange,
+    $color-orange-darkened,
+    $color-white);
+}

@@ -1,0 +1,48 @@
+// Colors
+//
+// @see https://hub.asu.edu/brand-hq/brand-standards/color-palette
+
+// Colors
+$color-maroon:           #8c1d40 !default;
+$color-brick-red:        #d23153 !default;
+$color-blue:             #00a3e0 !default;
+$color-green:            #78be20 !default;
+$color-orange:           #ff7f32 !default;
+$color-gold:             #ffc627 !default;
+$color-yellow:           $color-gold !default;
+$color-sun:              #ffb310 !default; // This is a slightly darker gold for text usage
+$color-selective-yellow: #ffb204 !default;
+$color-abbey:            #4f5557 !default;
+
+// Variants
+$color-green-darkened:    desaturate(adjust_hue(darken($color-green, 14), 42), 1);
+$color-blue-darkened:     desaturate(adjust_hue(darken($color-blue, 14), 42), 1);
+$color-yellow-darkened:   desaturate(darken($color-yellow, 18), 4);
+$color-orange-darkened:   desaturate(darken($color-orange, 18), 4);
+
+// ASU gray is 5c6670
+// Grays
+$color-black:          #000    !default;
+$color-cod-gray:       #1e1e1e !default;
+$color-dark-cave:      #1f1f1f !default;
+$color-dark-mine:      #2a2a2a !default;
+$color-mine-shaft:     #353535 !default;
+$color-tundora:        #414141 !default;
+$color-emperor:        #505050 !default;
+$color-scorpion:       #595959 !default;
+$color-dove-gray:      #666    !default;
+$color-boulder:        #707070 !default;
+$color-gray-boulder:   #7f7f7f !default;
+$color-gray:           #828282 !default;
+$color-dusty-gray:     #999    !default;
+$color-dull-chalice:   #a9a9a9 !default;
+$color-silver-chalice: #b0b0b0 !default;
+$color-nobel:          #b7b7b7 !default;
+$color-silver:         #ccc    !default;
+$color-alto:           #dbdbdb !default;
+$color-mercury:        #e5e5e5 !default;
+$color-gallery:        #ededed !default;
+$color-seashell:       #f1f1f1 !default;
+$color-wild-sand:      #f5f5f5 !default;
+$color-alabaster:      #fafafa !default;
+$color-white:          #fff    !default;

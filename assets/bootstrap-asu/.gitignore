@@ -1,0 +1,10 @@
+.yo-rc.json
+*.TMP
+npm-debug.log
+composer.phar
+
+/.sass-cache/
+/coverage/
+/node_modules/
+kss-template/node_modules
+package-lock.json

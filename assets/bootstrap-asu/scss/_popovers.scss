@@ -1,0 +1,9 @@
+// Popovers
+.popover {
+  border-radius: $border-radius;
+}
+
+.popover-title {
+  border-radius: ($border-radius - 1) ($border-radius - 1) 0 0;
+  font-size: $font-size-medium;
+}
