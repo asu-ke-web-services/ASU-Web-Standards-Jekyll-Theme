@@ -19,10 +19,13 @@ RUN mkdir -p $APP_ROOT
 # Set our working directory inside the image
 WORKDIR $APP_ROOT
 
-COPY Gemfile Gemfile.lock $APP_ROOT/
+COPY Gemfile Gemfile.lock package.json yarn.lock $APP_ROOT/
 
+# Cache gems
 RUN bundle install
 
+# Cache node_modules
+RUN yarn install
 
 # Copy the application into image
 COPY . $APP_ROOT/

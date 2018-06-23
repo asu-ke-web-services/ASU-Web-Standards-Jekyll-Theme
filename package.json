@@ -7,10 +7,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "Respond.js": "https://github.com/scottjehl/Respond",
     "bootstrap": "^3.3.7",
     "bootstrap-asu": "https://github.com/gios-asu/ASU-Web-Standards-Bootstrap",
     "font-awesome": "^4.7.0",
-    "jquery": "~2.2.4"
+    "jquery": "~2.2.4",
+    "respondjs": "https://github.com/scottjehl/Respond"
   }
 }

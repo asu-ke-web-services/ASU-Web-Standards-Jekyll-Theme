@@ -172,17 +172,17 @@ docker-compose build
 Run `bundle update` to update the Gemfile and Gemfile.lock dependencies
 
 ```
-docker-compose run bundle update
+docker-compose run test bundle update
 ```
 
 Run all tests and build updated assets:
 ```
-docker-compose run grunt
+docker-compose run test grunt
 ```
 
 Run specific Grunt task (such as `tests`):
 ```
-docker-compose run grunt test
+docker-compose run test grunt test
 ```
 
 To remove all containers and other resources created here:

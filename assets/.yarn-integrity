@@ -1,30 +1,23 @@
 {
-  "systemParams": "linux-x64-57",
+  "systemParams": "darwin-x64-64",
   "modulesFolders": [
     "assets"
   ],
   "flags": [],
   "linkedModules": [],
   "topLevelPatterns": [
-    "Respond.js@https://github.com/scottjehl/Respond",
     "bootstrap-asu@https://github.com/gios-asu/ASU-Web-Standards-Bootstrap",
     "bootstrap@^3.3.7",
     "font-awesome@^4.7.0",
-    "jquery@~2.2.4"
+    "jquery@~2.2.4",
+    "respondjs@https://github.com/scottjehl/Respond"
   ],
   "lockfileEntries": {
-    "@bower_components/bootstrap@twbs/bootstrap#^3.3.6": "https://codeload.github.com/twbs/bootstrap/tar.gz/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
-    "@bower_components/fastclick@ftlabs/fastclick#^1.0.6": "https://codeload.github.com/ftlabs/fastclick/tar.gz/9977a916739360ad4ffd7aa19b0016bf375e934b",
-    "@bower_components/font-awesome@FortAwesome/Font-Awesome#~4.6": "https://codeload.github.com/FortAwesome/Font-Awesome/tar.gz/8e241f209faa1dd2182c9fdc9c352d8806504a4e",
-    "@bower_components/jquery@jquery/jquery-dist#~2.2.0": "https://codeload.github.com/jquery/jquery-dist/tar.gz/c0185ab7c75aab88762c5aae780b9d83b80eda72",
-    "@bower_components/moment@moment/moment#^2.15.1": "https://codeload.github.com/moment/moment/tar.gz/2e2a5b35439665d4b0200143d808a7c26d6cd30f",
-    "@bower_components/qunit@jquery/qunit#~1.15.0": "https://codeload.github.com/jquery/qunit/tar.gz/fad833435127e51de7fda2975377ac8e91fe7210",
-    "@bower_components/smooth-scroll@cferdinandi/smooth-scroll#^10.1.0": "https://codeload.github.com/cferdinandi/smooth-scroll/tar.gz/a541227605cc46f05c87748cda68397aa961a8eb",
-    "Respond.js@https://github.com/scottjehl/Respond": "https://github.com/scottjehl/Respond#9d91fd47eb59c11a80d570d4ea0beaa59cfc71bf",
-    "bootstrap-asu@https://github.com/gios-asu/ASU-Web-Standards-Bootstrap": "https://github.com/gios-asu/ASU-Web-Standards-Bootstrap#0461116497155350ca5edc830c55d62c6ba66406",
+    "bootstrap-asu@https://github.com/gios-asu/ASU-Web-Standards-Bootstrap": "https://github.com/gios-asu/ASU-Web-Standards-Bootstrap#c0e53a16b747f1d333abfbdadc8309013189f2d0",
     "bootstrap@^3.3.7": "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71",
     "font-awesome@^4.7.0": "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133",
-    "jquery@~2.2.4": "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+    "jquery@~2.2.4": "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02",
+    "respondjs@https://github.com/scottjehl/Respond": "https://github.com/scottjehl/Respond#9d91fd47eb59c11a80d570d4ea0beaa59cfc71bf"
   },
   "files": [],
   "artifacts": {}

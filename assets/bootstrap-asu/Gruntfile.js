@@ -79,11 +79,11 @@ module.exports = function(grunt) {
         plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-coverage'],
         files: [
           {
-            src: ['node_modules/@bower_components/jquery/dist/jquery.min.js'],
+            src: ['node_modules/jquery/dist/jquery.min.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/bootstrap/dist/js/bootstrap.min.js'],
+            src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
             served: true
           },
           {
@@ -91,15 +91,15 @@ module.exports = function(grunt) {
             served: true
           },
           {
-            src: ['node_modules/@bower_components/fastclick/lib/fastclick.js'],
+            src: ['node_modules/fastclick/lib/fastclick.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/smooth-scroll/dist/js/smooth-scroll.js'],
+            src: ['node_modules/smooth-scroll/dist/js/smooth-scroll.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/moment/moment.js'],
+            src: ['node_modules/moment/moment.js'],
             served: true
           },
           {
@@ -120,11 +120,11 @@ module.exports = function(grunt) {
         plugins: ['karma-qunit', 'karma-phantomjs-launcher'],
         files: [
           {
-            src: ['node_modules/@bower_components/jquery/dist/jquery.min.js'],
+            src: ['node_modules/jquery/dist/jquery.min.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/bootstrap/dist/js/bootstrap.min.js'],
+            src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
             served: true
           },
           {
@@ -132,15 +132,15 @@ module.exports = function(grunt) {
             served: true
           },
           {
-            src: ['node_modules/@bower_components/fastclick/lib/fastclick.js'],
+            src: ['node_modules/fastclick/lib/fastclick.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/smooth-scroll/dist/js/smooth-scroll.js'],
+            src: ['node_modules/smooth-scroll/dist/js/smooth-scroll.js'],
             served: true
           },
           {
-            src: ['node_modules/@bower_components/moment/moment.js'],
+            src: ['node_modules/moment/moment.js'],
             served: true
           },
           {
@@ -211,11 +211,11 @@ module.exports = function(grunt) {
       bootstrapAsu: {
         src: [
           'js/_license.js',
-          'node_modules/@bower_components/fastclick/lib/fastclick.js',
+          'node_modules/fastclick/lib/fastclick.js',
           'js/_fastclick.js',
-          'node_modules/@bower_components/smooth-scroll/dist/js/smooth-scroll.js',
+          'node_modules/smooth-scroll/dist/js/smooth-scroll.js',
           'js/_smoothscroll.js',
-          'node_modules/@bower_components/moment/moment.js',
+          'node_modules/moment/moment.js',
           'js/_calendar.js',
           'js/_iframe-overlay.js',
           'js/_smartresize.js',
@@ -305,24 +305,13 @@ module.exports = function(grunt) {
         }
       }
     },
-    // Grunt Bower
-    // ===========
-    bower: {
-      dev: {
-        dest: './build/docs',
-        options: {
-          keepExpandedHierarchy: false,
-          packageSpecific: {
-            'font-awesome': {
-              fonts_dest: './build/fonts',
-              files: [
-                'fonts/*'
-              ]
-            }
-          },
-          ignorePackages: ['bootstrap-sass', 'qunit']
-        }
-      }
+    copy: {
+      main: {
+        files: [
+          // Font awesome fonts
+          {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'build/fonts/', filter: 'isFile'}
+        ],
+      },
     },
     bootlint: {
       options: {
@@ -346,11 +335,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-kss');
-  grunt.loadNpmTasks('grunt-bower');
   grunt.loadNpmTasks('grunt-bootlint');
 
   grunt.registerTask('validate', [
@@ -370,7 +359,7 @@ module.exports = function(grunt) {
     'concat',
     'uglify',
     'cssmin',
-    'bower',
+    'copy',
   ]);
 
   // just for building the docs quickly

@@ -2,34 +2,6 @@
 # yarn lockfile v1
 
 
-"@bower_components/bootstrap@twbs/bootstrap#^3.3.6":
-  version "3.3.7"
-  resolved "https://codeload.github.com/twbs/bootstrap/tar.gz/0b9c4a4007c44201dce9a6cc1a38407005c26c86"
-
-"@bower_components/fastclick@ftlabs/fastclick#^1.0.6":
-  version "1.0.6"
-  resolved "https://codeload.github.com/ftlabs/fastclick/tar.gz/9977a916739360ad4ffd7aa19b0016bf375e934b"
-
-"@bower_components/font-awesome@FortAwesome/Font-Awesome#~4.6":
-  version "4.6.3"
-  resolved "https://codeload.github.com/FortAwesome/Font-Awesome/tar.gz/8e241f209faa1dd2182c9fdc9c352d8806504a4e"
-
-"@bower_components/jquery@jquery/jquery-dist#~2.2.0":
-  version "2.2.4"
-  resolved "https://codeload.github.com/jquery/jquery-dist/tar.gz/c0185ab7c75aab88762c5aae780b9d83b80eda72"
-
-"@bower_components/moment@moment/moment#^2.15.1":
-  version "2.22.2"
-  resolved "https://codeload.github.com/moment/moment/tar.gz/2e2a5b35439665d4b0200143d808a7c26d6cd30f"
-
-"@bower_components/qunit@jquery/qunit#~1.15.0":
-  version "1.15.0"
-  resolved "https://codeload.github.com/jquery/qunit/tar.gz/fad833435127e51de7fda2975377ac8e91fe7210"
-
-"@bower_components/smooth-scroll@cferdinandi/smooth-scroll#^10.1.0":
-  version "10.3.1"
-  resolved "https://codeload.github.com/cferdinandi/smooth-scroll/tar.gz/a541227605cc46f05c87748cda68397aa961a8eb"
-
 JSV@^4.0.x:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/JSV/-/JSV-4.0.2.tgz#d077f6825571f82132f9dffaed587b4029feff57"
@@ -362,6 +334,10 @@ bootlint@^0.14.2:
     morgan "^1.5.1"
     semver "^5.0.3"
     void-elements "^2.0.1"
+
+bootstrap@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
 
 bower@~1.7.9:
   version "1.7.10"
@@ -1278,6 +1254,10 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
+fastclick@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/fastclick/-/fastclick-1.0.6.tgz#161625b27b1a5806405936bda9a2c1926d06be6a"
+
 faye-websocket@~0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.10.0.tgz#4e492f8d04dfb6f89003507f6edbf2d501e7c6f4"
@@ -1296,6 +1276,10 @@ figures@^1.0.1:
   dependencies:
     escape-string-regexp "^1.0.5"
     object-assign "^4.1.0"
+
+file-sync-cmp@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/file-sync-cmp/-/file-sync-cmp-0.1.1.tgz#a5e7a8ffbfa493b43b923bbd4ca89a53b63b612b"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -1377,6 +1361,10 @@ follow-redirects@^1.0.0, follow-redirects@^1.2.5:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.0.tgz#234f49cf770b7f35b40e790f636ceba0c3a0ab77"
   dependencies:
     debug "^3.1.0"
+
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -1629,6 +1617,13 @@ grunt-contrib-concat@~1.0:
   dependencies:
     chalk "^1.0.0"
     source-map "^0.5.3"
+
+grunt-contrib-copy@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-contrib-copy/-/grunt-contrib-copy-1.0.0.tgz#7060c6581e904b8ab0d00f076e0a8f6e3e7c3573"
+  dependencies:
+    chalk "^1.1.1"
+    file-sync-cmp "^0.1.0"
 
 grunt-contrib-cssmin@~1.0:
   version "1.0.2"
@@ -2234,6 +2229,10 @@ istanbul@~0.3.0, istanbul@~0.3.2:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
+jquery@~2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+
 js-yaml@3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
@@ -2731,6 +2730,10 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@0.x.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~
 mkdirp@~0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
+
+moment@^2.15.1:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
 morgan@^1.5.1:
   version "1.9.0"
@@ -3538,6 +3541,10 @@ sigmund@~1.0.0:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+"smooth-scroll@https://github.com/cferdinandi/smooth-scroll/archive/v10.3.1.tar.gz":
+  version "10.3.1"
+  resolved "https://github.com/cferdinandi/smooth-scroll/archive/v10.3.1.tar.gz#c6552f5797e021a0eebc248120ae227e0682a98e"
 
 sntp@1.x.x:
   version "1.0.9"
