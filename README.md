@@ -29,3 +29,11 @@ docker-compose up
 The compiled website will be saved into the `_site/` folder.
 
 Preview your compiled website at: `http://localhost`
+
+## Updating software
+
+Run `bundle update` to update the Gemfile and Gemfile.lock dependencies
+
+```
+docker-compose run test bundle update
+```
